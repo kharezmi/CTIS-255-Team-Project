@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make-a-Friend</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="friend.css" />
+    <script src="data.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="title"><a href="main.html" id="title">BILCONFESS</a></div>
+      <div class="navBar">
+        <a href="">FEED</a>
+        <a href="">SUBMIT A POST</a>
+        <a href="">LOVE CONFESSIONS</a>
+        <a href="">MAKE-A-FRIEND</a>
+        <a href="">NEWS</a>
+        <a href="" id="dark"><i class="fa-solid fa-moon"></i></a>
+      </div>
+      <script>
+        var darkMode = document.getElementById("dark");
+
+        darkMode.addEventListener("click", function () {
+          var bodyBg = document.getElementsByClassName("container");
+          bodyBg.style.backgroundColor = "black";
+        });
+      </script>
+      <div id="make_a_friend">
+        <h2>MAKE-A-FRIEND</h2>
+      </div>
+
+      <div id="submit">
+        <h3>Tell us about yourself</h3>
+        <div id="form">
+          <form action="">
+            <table>
+              <tr>
+                <td>Name&Surname</td>
+                <td>
+                  <input
+                    type="text"
+                    placeholder="Enter your name and surname"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Age</td>
+                <td><input type="text" placeholder="Enter your age" /></td>
+              </tr>
+              <tr>
+                <td>Gender</td>
+                <td>
+                  <select name="" id="">
+                    <option value="" disabled selected>Choose Gender</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                    <option value="">Non-Binary</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Faculty</td>
+                <td>
+                  <select name="" id="">
+                    <option value="" disabled selected>Choose Faculty</option>
+                    <script>
+                      for (let fac of faculties) {
+                        document.write(`<option value="">${fac}</option>`);
+                      }
+                    </script>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Hobby</td>
+                <td>
+                  <script>
+                    //hobiler
+                  </script>
+                </td>
+              </tr>
+            </table>
+          </form>
+          <div id="txtarea">
+            <textarea
+              name=""
+              id=""
+              placeholder="Add other features of yours..."
+            ></textarea>
+          </div>
+        </div>
+        <div id="agreement">
+          <p>I agree with the rules <input id="check" type="checkbox" /></p>
+
+          <button>Submit</button>
+        </div>
+      </div>
+      <footer>
+        <div id="topFooter">
+          <div id="leftSocial">
+            <h1>BILCONFESS</h1>
+          </div>
+          <div id="rightSocial">
+            <div class="social" id="sendMail">
+              <a href=""
+                ><span id="hello"
+                  >Say Hello: <i class="fa-regular fa-envelope"></i> </span
+              ></a>
+            </div>
+            <div class="social" id="accounts">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+              <a href=""> <i class="fa-brands fa-linkedin-in"></i></a>
+              <a href=""> <i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div id="middleFooter">
+          <a href="">Home Page</a>
+          <a href="">Feed</a>
+          <a href="">Current News</a>
+          <a href="">Submit a Confession</a>
+          <a href="">Love Confessions</a>
+          <a href="">Make-a-Friend</a>
+        </div>
+        <div id="bottomFooter">
+          <a href="">Terms of Use</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Copyright @2025</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

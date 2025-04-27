@@ -1,0 +1,179 @@
+body {
+  font-family: "Darker Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: rgb(126, 102, 94);
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#title {
+  font-weight: bold;
+  color: rgb(126, 102, 94);
+  text-align: center;
+  font-size: 40px;
+  text-decoration: none;
+}
+.navBar {
+  margin: 20px auto;
+  background-color: rgb(228, 218, 216);
+  width: 900px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+a {
+  text-decoration: none;
+  color: rgb(126, 102, 94);
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  width: 928px;
+}
+.cols {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 1px;
+}
+.confess {
+  background-color: rgb(228, 218, 216);
+  width: 400px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 10px;
+  position: relative;
+  top: 5px;
+}
+.confessContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5 15;
+  font-weight: bold;
+}
+.confessContent i {
+  font-size: 12px;
+}
+i#dark {
+  font-size: 15px;
+}
+p {
+  color: rgb(84, 68, 63);
+  font-size: 18px;
+}
+div#left {
+  position: relative;
+  top: 5px;
+}
+div#right {
+  position: relative;
+  top: 5px;
+}
+footer {
+  background-color: rgb(228, 218, 216);
+  border-radius: 20px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 900px;
+  font-size: 20px;
+}
+#topFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+  align-items: center;
+  max-height: max-content;
+}
+#topFooter > div#leftSocial {
+  background-color: rgba(162, 132, 122, 0.6);
+  border-radius: 15px;
+  border: 1px solid rgb(114, 94, 86);
+  width: 300px; 
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#rightSocial {
+  display: flex;
+  flex-direction: column;
+}
+#rightSocial > div.social {
+  border: 1px solid rgb(114, 94, 86);
+  border-radius: 10px;
+  background-color: rgba(162, 132, 122, 0.6);
+  width: 520px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 20px;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#leftSocial h1 {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(103, 84, 77);
+}
+#middleFooter {
+  text-align: center;
+  background-color: rgba(162, 132, 122, 0.6);
+  border-radius: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px 20px;
+  padding: 10px;
+  align-items: center;
+  border: 1px solid rgb(114, 94, 86);
+}
+#bottomFooter {
+  text-align: center;
+  border: 1px solid rgb(114, 94, 86);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 5px;
+  margin: 10px 20px;
+  background-color: rgba(154, 127, 117, 0.6);
+}
+#bottomFooter a,
+#middleFooter a {
+  color: rgb(248, 248, 248);
+}
+footer a:hover {
+  color: #f0efe7;
+}
+.navBar a:hover {
+  color: rgb(66, 54, 50);
+}
+span#hello{
+    font-weight: bold;
+    font-size: 20px;
+}
+#hello i{
+    font-size: 15px;
+}
