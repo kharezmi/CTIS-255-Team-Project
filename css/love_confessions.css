@@ -1,0 +1,264 @@
+:root{
+    --bg-color-1: #FFFFFF;
+    --bg-color-2: #E6DAD7;
+    --text: #7F655C;
+    --button: #CCAFA5;
+    --border:#A9887C;
+    --bow:#7C5E53;
+    --button-alt:#A9887C;
+    --text-alt:#FFFFFF;
+    --game-white:#FFFFFF;
+    --hearts-1:#FF6BA4;
+    --hearts-2:#FF9CB8s;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Darker Grotesque", sans-serif;
+    color: var(--text);
+}
+
+h1{
+    font-size: 48px;
+    line-height: 0px;
+}
+
+
+h2{
+    display: inline;
+    font-size: 24px;
+    line-height: 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+    justify-self: center;
+}
+
+p{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+#full{
+    display: flex;
+    flex-direction: column; 
+    width: 1136px;
+    padding: 32px 152px 65px 152px;
+    gap: 48px;
+    background-color: var(--bg-color-1, #FFFFFF);
+}
+
+header{
+    width:100%;
+    text-align: center;
+    align-self: center;
+}
+
+header h1{
+    padding-bottom: 42px;
+}
+
+menu {
+    display: flex;
+    flex-direction: row;
+    gap: 72px;
+    border-radius: 16px;
+    padding: 15px 40px;
+    background-color: var(--bg-color-2);
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px 20px;
+    border-radius: 40px;
+    background: var(--Background-2, #E6DAD7);
+    width: 560px;
+}
+
+.start-end{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+    
+}
+
+#comment{
+    position: relative;
+    width: 52px;
+    
+}
+
+#react{
+    position:relative;
+    width: 112px;
+    align-items: center;
+}
+
+#react div{
+    justify-items: center;
+}
+
+#comment img{
+    position: absolute;
+    left: 0px;
+    top: 6px;
+}
+
+#react div:first-of-type{
+    position:absolute;
+    top: 6px;
+    gap: 4px;
+}
+
+#comment p{
+    position: absolute;
+    right: 0px;
+}
+
+#react p{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+}
+
+.icon{
+    width: 24px;
+    height: 24px;
+    
+}
+
+#game{
+    width: 560px;
+    height: 560px;
+    border-radius: 40px;
+    background: var(--Background-2, #E6DAD7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+#game *{
+    z-index: 2;
+}
+
+main{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+#time, #score{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+#score{
+    text-align: right;
+}
+
+#game_interface_top, #game_interface_bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 24px;
+}
+
+#game_interface_bottom{
+    padding-block: 15px;
+}
+
+#game button{
+    background: var(--game-white, #FFF);
+    border-radius: 8px;
+    height: 32px;
+    border-color: var(--game-white, #FFF);
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#shoot, #game_moving_left, #game_moving_right{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#moving{
+    display: flex;
+    width: 92px;
+    justify-content: space-between;
+}
+
+
+#shoot button{
+    width: 128px;
+}
+
+#game img{
+    position: absolute;
+    z-index: 1;
+}
+
+.heart{
+    width: 45.5px;
+    height: 40px;
+}
+
+#cloud1{
+    top: 68px;
+}
+
+#cloud2{
+    left: 213px;
+}
+
+#cloud3{
+    left: 316px;
+    top: 31px;
+}
+
+#bow{
+    bottom: 0px;
+    align-self: center;
+}
+
+footer{
+    border-radius: 40px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: var(--bg-color-2, #E6DAD7);
+}
+footer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer #logo{
+    width: 368px;
+    height: 176px;
+    background: var(--button, #CCAFA5);
+    border-radius: 20px;
+}
+
+footer #to_left p{
+    display: flex;
+    
+    gap: 20px;
+    padding: 20px 60px;
+    background: var(--button, #CCAFA5);
+    
+}
