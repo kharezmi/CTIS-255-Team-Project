@@ -241,6 +241,7 @@ footer{
     padding: 20px;
     background: var(--bg-color-2, #E6DAD7);
 }
+
 footer div{
     display: flex;
     justify-content: center;
@@ -254,11 +255,45 @@ footer #logo{
     border-radius: 20px;
 }
 
-footer #to_left p{
+footer #to_right p{
     display: flex;
-    
     gap: 20px;
     padding: 20px 60px;
     background: var(--button, #CCAFA5);
+    align-self: stretch;
+    border-radius: 20px;
+    justify-content: center;
     
+}
+
+#to_right {
+    flex-direction: column;
+    gap: 16px;
+    flex:1;
+    
+}
+
+#footer_top{
+    display: flex;
+    gap: 16px;
+    
+}
+
+#line{
+    display: flex;
+    padding: 10px 60px;
+    justify-content: space-between;
+    border-radius: 20px;
+    background: var(--button, #CCAFA5);
+}
+
+#dark{
+    align-items: center;
+    border-radius: 20px;
+    background: var(--button-alt, #A9887C);
+    padding: 10px 60px;
+}
+
+#dark *{
+    color: var(--text-alt, #FFF);
 }
