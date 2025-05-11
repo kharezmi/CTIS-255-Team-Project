@@ -5,6 +5,7 @@ const MIN_SPACING = 50; // min distance between hearts
 
 let score = 0;
 let hearts = new Array(SIZE);
+let angle = 0;
 
 
 class Heart {
@@ -29,6 +30,7 @@ function shoot() {
     arrow_img.style.height = "18";
     arrow_img.style.left = x + "px";
     arrow_img.style.top = y + "px";
+    arrow_img.className = "arrow";
 
     arrows.push({x, y, angle : angle, img : arrow_img});
     $("#game").append(arrow_img)
@@ -48,7 +50,10 @@ $(document).ready(function () {
 
             let arrows = [];
 
-
+            $(window).on("keydown", function (e){
+                if(e.key == "Space")
+                    shoot();
+            });
 
             for (let i = 0; i < SIZE; i++) {
                 let tooClose = false;
@@ -85,13 +90,13 @@ $(document).ready(function () {
             }
 
             let arrow_timer = setInterval(function () {
-                for(let arrow of arrows){
-                    arrow.x += 5 * Math.cos(arrow.angle * Math.PI / 180);
-                    arrow.y -= 5 * Math.sin(arrow.angle * Math.PI / 180);
-                    arrow.element.css({ left: arrow.x + "px", top: arrow.y + "px" });
-                    if(arrow.x < 0 || arrow.x > 480 || arrow.y < 0 || arrow.y > 350){
-                        arrow.img.remove();
-                        arrows.splice(arrow);
+                for(let i = arrows.length - 1; i>=0; i++){
+                    arrows[i].x += 5 * Math.cos(arrows[i].angle * Math.PI / 180);
+                    arrows[i].y -= 5 * Math.sin(arrows[i].angle * Math.PI / 180);
+                    arrows[i].img.css({ left: arrows[i].x + "px", top: arrows[i].y + "px" });
+                    if(arrows[i].x < 0 || arrows[i].x > 480 || arrows[i].y < 0 || arrows[i].y > 350){
+                        arrows[i].img.remove();
+                        arrows.splice(i, 1);
                     }
                 }
             }, 50);
@@ -130,6 +135,7 @@ $(document).ready(function () {
                     isGameStarted = false;
                     $("#game").on("click", start_game);
                     $(".heart").remove();
+                    $(".arrow").remove();
                     $("#sec").html('30');
                     clearInterval(game_timer);
                     clearInterval(heart_timer);
@@ -140,8 +146,6 @@ $(document).ready(function () {
 
             }, 1000);
 
-
-            let angle = 0;
 
             $(window).on("keydown", function (e) {
                 if (e.key == "ArrowLeft")
