@@ -1,10 +1,12 @@
 const SIZE = 8; //number of hearts
 const COLORS = ["pink", "purple", "gold"]; //heart colors
 const MIN_SPACING = 50; // min distance between hearts
+const ARROW_SPEED = 6; 
 
 
 let score = 0;
 let hearts = new Array(SIZE);
+let arrows = [];
 let angle = 0;
 
 
@@ -20,20 +22,19 @@ class Heart {
 
 function shoot() {
     let bowPos = $("#bow").offset();
-    let x = bowPos.left;
-    let y = bowPos.top;
-
+    let x = bowPos.left + $("#bow").width() / 2 - 10;
+    let y = bowPos.top + $("#bow").height() /4 - 9;
     let arrow_img = document.createElement("img");
     arrow_img.src = "images/arrow_heart.svg";
     arrow_img.style.position = "absolute";
-    arrow_img.style.width = "21";
-    arrow_img.style.height = "18";
+    arrow_img.style.width = "21px";
+    arrow_img.style.height = "18px";
     arrow_img.style.left = x + "px";
     arrow_img.style.top = y + "px";
     arrow_img.className = "arrow";
 
-    arrows.push({x, y, angle : angle, img : arrow_img});
-    $("#game").append(arrow_img)
+    arrows.push({ x, y, angle: angle, img: arrow_img });
+    $("#game").append(arrow_img);
 }
 
 let isGameStarted = false;
@@ -47,13 +48,6 @@ $(document).ready(function () {
         if (!isGameStarted) {
             isGameStarted = true;
             $("#game").off("click")
-
-            let arrows = [];
-
-            $(window).on("keydown", function (e){
-                if(e.key == "Space")
-                    shoot();
-            });
 
             for (let i = 0; i < SIZE; i++) {
                 let tooClose = false;
@@ -90,14 +84,19 @@ $(document).ready(function () {
             }
 
             let arrow_timer = setInterval(function () {
-                for(let i = arrows.length - 1; i>=0; i++){
-                    arrows[i].x += 5 * Math.cos(arrows[i].angle * Math.PI / 180);
-                    arrows[i].y -= 5 * Math.sin(arrows[i].angle * Math.PI / 180);
-                    arrows[i].img.css({ left: arrows[i].x + "px", top: arrows[i].y + "px" });
-                    if(arrows[i].x < 0 || arrows[i].x > 480 || arrows[i].y < 0 || arrows[i].y > 350){
-                        arrows[i].img.remove();
-                        arrows.splice(i, 1);
+                for (let i = 0; i < arrows.length; i++) {
+                    if (arrows[i]) {
+                        arrows[i].x += ARROW_SPEED * Math.sin(arrows[i].angle * Math.PI / 180);
+                        arrows[i].y -= ARROW_SPEED * Math.cos(arrows[i].angle * Math.PI / 180);
+                        $(arrows[i].img).css({ left: arrows[i].x + "px", top: arrows[i].y + "px" , transform: "rotate(" + arrows[i].angle + "deg)"});
+                        if (arrows[i].x < 0 || arrows[i].x > 560-40 || arrows[i].y < 0 || arrows[i].y > 560) {
+                            arrows[i].img.remove();
+                            arrows.splice(i, 1);
+                            i--;
+                        }
+
                     }
+
                 }
             }, 50);
 
@@ -136,6 +135,7 @@ $(document).ready(function () {
                     $("#game").on("click", start_game);
                     $(".heart").remove();
                     $(".arrow").remove();
+                    arrows = []
                     $("#sec").html('30');
                     clearInterval(game_timer);
                     clearInterval(heart_timer);
@@ -146,12 +146,11 @@ $(document).ready(function () {
 
             }, 1000);
 
-
+            $("#shoot button").on("click", shoot);
             $(window).on("keydown", function (e) {
-                if (e.key == "ArrowLeft")
-                    angle -= 5;
-                else if (e.key == "ArrowRight")
-                    angle += 5;
+                if (e.key == "ArrowLeft") angle -= 5;
+                else if (e.key == "ArrowRight") angle += 5;
+                else if (e.key == "Space") shoot();
                 angle = Math.min(60, angle);
                 angle = Math.max(-60, angle);
                 $("#bow").css({ "transform": "rotate(" + angle + "deg)", "transform-origin": "50% 75%" });

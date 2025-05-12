@@ -298,3 +298,9 @@ footer #to_right p{
 #dark *{
     color: var(--text-alt, #FFF);
 }
+
+.arrow{
+    width: 21px;
+    height : 18px;
+    z-index: 10;
+}
