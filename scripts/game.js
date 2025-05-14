@@ -21,9 +21,10 @@ class Heart {
 }
 
 function shoot() {
-    let bowPos = $("#bow").offset();
-    let x = bowPos.left + $("#bow").width() / 2 - 10;
-    let y = bowPos.top + $("#bow").height() /4 - 9;
+    let x = 260 + 100 * Math.sin((angle*Math.PI)/180);
+    let y = 425 + 30 * Math.cos((angle*Math.PI)/180);
+
+
     let arrow_img = document.createElement("img");
     arrow_img.src = "images/arrow_heart.svg";
     arrow_img.style.position = "absolute";
@@ -32,9 +33,12 @@ function shoot() {
     arrow_img.style.left = x + "px";
     arrow_img.style.top = y + "px";
     arrow_img.className = "arrow";
+    arrow_img.style.transform = `rotate(${angle}deg)`;
+    
 
     arrows.push({ x, y, angle: angle, img: arrow_img });
     $("#game").append(arrow_img);
+    console.log(`${x} ${y} ${angle}`)
 }
 
 let isGameStarted = false;
@@ -119,6 +123,7 @@ $(document).ready(function () {
 
                     $("#heart-" + i).css("left", hearts[i].x + "px");
                     $("#heart-" + i).css("top", hearts[i].y + "px");
+
                     //change hearts' colors
                 }
             }, 5000);
@@ -147,10 +152,23 @@ $(document).ready(function () {
             }, 1000);
 
             $("#shoot button").on("click", shoot);
+            $("#left").on("click", function (){
+                angle-=5;
+                angle = Math.min(60, angle);
+                angle = Math.max(-60, angle);
+                $("#bow").css({ "transform": "rotate(" + angle + "deg)", "transform-origin": "50% 75%" });
+            });
+            $("#right").on("click", function (){
+                angle+=5;
+                angle = Math.min(60, angle);
+                angle = Math.max(-60, angle);
+                $("#bow").css({ "transform": "rotate(" + angle + "deg)", "transform-origin": "50% 75%" });
+            });
             $(window).on("keydown", function (e) {
+                e.preventDefault();
                 if (e.key == "ArrowLeft") angle -= 5;
                 else if (e.key == "ArrowRight") angle += 5;
-                else if (e.key == "Space") shoot();
+                else if (e.key == " ") shoot();
                 angle = Math.min(60, angle);
                 angle = Math.max(-60, angle);
                 $("#bow").css({ "transform": "rotate(" + angle + "deg)", "transform-origin": "50% 75%" });
@@ -162,5 +180,3 @@ $(document).ready(function () {
 
 
 });
-
-
