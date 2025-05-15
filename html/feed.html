@@ -12,19 +12,59 @@
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../css/feed.css" />
+  <script src="../scripts/functions.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <div id="title"><a href="main.html" id="title">BILCONFESS</a></div>
-    <div class="navBar">
-      <a href="">FEED</a>
-      <a href="">SUBMIT A POST</a>
-      <a href="">LOVE CONFESSIONS</a>
-      <a href="">MAKE-A-FRIEND</a>
-      <a href="">NEWS</a>
-      <a href=""><img src="../images/iconamoon-mode-dark.svg" alt=""></a>
+    <div id="title"><a href="main.html" id="titleConfess">BILCONFESS</a></div>
+    <div id="navBar">
+      <a class="nav" href="feed.html">FEED</a>
+      <a class="nav" href="">SUBMIT A POST</a>
+      <a class="nav" href="../love_confessions.html" target="_blank">LOVE CONFESSIONS</a>
+      <a class="nav" href="">MAKE-A-FRIEND</a>
+      <a class="nav" href="">NEWS</a>
+      <img src="../images/iconamoon-mode-dark.svg" alt="" id="darkMode">
     </div>
+
+    <script>
+
+      var dark = document.getElementById("darkMode");
+
+      dark.addEventListener("click", function () {
+
+        var cont = document.getElementsByClassName("container")[0];
+        cont.style.backgroundColor = "#322622";
+        document.body.style.backgroundColor = "#322622";
+
+        var title = document.getElementById("titleConfess");
+        title.style.color = "#E6DAD7";
+
+        var confessCont = document.getElementsByClassName("confess");
+        var paragraphs = document.getElementsByClassName("para");
+
+        for (let i = 0; i < confessCont.length; i++) {
+          confessCont[i].style.backgroundColor = "rgb(164, 137, 126)";
+          confessCont[i].style.color = "#E6DAD7";
+          paragraphs[i].style.color = "#E6DAD7";
+        }
+
+        var nav = document.getElementById("navBar");
+        nav.style.backgroundColor = "rgb(164, 137, 126)";
+        
+        var navLinks = document.getElementsByClassName("nav");
+
+        for(let link of navLinks){
+          link.style.color = "#E6DAD7";
+        }
+
+        var foot = document.querySelector("footer");
+        foot.style.backgroundColor = "#A9887C";
+
+      });
+      
+    </script>
+
     <div class="content">
       <div class="cols" id="left">
         <div class="confess">
@@ -32,7 +72,7 @@
             <div>From: Unknown</div>
             <div>Mon Feb 24</div>
           </div>
-          <p>
+          <p class="para">
             Hi! I’ve been wanting to get into volleyball more seriously for
             some time. I’ve played a bit before, but not on a professional
             level. I’d really love to improve and practice regularly. It would
@@ -52,7 +92,7 @@
             <div>From: Unknown</div>
             <div>Fri Mar 14</div>
           </div>
-          <p>
+          <p class="para">
             Every time I think about what I said to you, my heart aches. I
             can’t forget the moments I hurt you. The disappointment I saw in
             your eyes still haunts me. Even your silence is enough to tear me
@@ -76,7 +116,7 @@
             <div>From: Unknown</div>
             <div>Wed Apr 23</div>
           </div>
-          <p>
+          <p class="para">
             Hello, I have wanted to play volleyball for a long time, but I
             want to do more volleyball training. I played for a while, but not
             professionally. I want to improve myself. I would be very happy if
@@ -99,7 +139,7 @@
             <div>From: Unknown</div>
             <div>Thu May 1</div>
           </div>
-          <p>
+          <p class="para">
             I often think that the reason why I cannot make close friends at
             this school is that I do not smoke. Of course, I have classmates
             and friends from the club, but they disappear to the smoking area
@@ -120,7 +160,7 @@
             <div>From: Unknown</div>
             <div>Mon Feb 24</div>
           </div>
-          <p>
+          <p class="para">
             I shouted at you in G building, I broke your heart, beautiful, and
             I feel the pain of this more and more every day. At that moment,
             in my anger, even when I think of you, my eyes fill with tears. I
@@ -145,7 +185,7 @@
             <div>From: Unknown</div>
             <div>Mon Feb 24</div>
           </div>
-          <p>
+          <p class="para">
             Hi! I’ve been wanting to get into volleyball more seriously for
             some time. I’ve played a bit before, but not on a professional
             level. I’d really love to improve and practice regularly. It would
@@ -172,7 +212,7 @@
             Contact Us: email@email.com
           </div>
           <div class="social" id="accounts">
-            <p>Our Socials     <img src="../images/mdi-instagram.svg" alt=""></p>
+            <p>Our Socials <img src="../images/mdi-instagram.svg" alt=""></p>
           </div>
         </div>
       </div>
@@ -181,14 +221,14 @@
         <a href="">Feed</a>
         <a href="">Current News</a>
         <a href="">Submit a Confession</a>
-        <a href="">Love Confessions</a>
+        <a href="../love_confessions.html" target="_blank">Love Confessions</a>
         <a href="">Make-a-Friend</a>
       </div>
       <div id="bottomFooter">
         <p>
           <a>Terms of Use</a> |
           <a>Privacy Policy</a> |
-          <a>Copyright@2025</a>
+          <a>Copyright @ 2025</a>
         </p>
       </div>
     </footer>
