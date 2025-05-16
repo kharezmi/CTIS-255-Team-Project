@@ -9,7 +9,7 @@
     --text-alt:#FFFFFF;
     --game-white:#FFFFFF;
     --hearts-1:#FF6BA4;
-    --hearts-2:#FF9CB8s;
+    --hearts-2:#FF9CB8;
 }
 
 
@@ -26,7 +26,7 @@ h1{
 }
 
 
-h2{
+header a{
     display: inline;
     font-size: 24px;
     line-height: 0px;
@@ -35,10 +35,15 @@ h2{
     justify-self: center;
 }
 
-p{
+a, p{
     font-size: 24px;
     font-weight: 500;
     line-height: 32px;
+}
+
+#confessions{
+    column-count: 2;
+    column-gap: 20px;
 }
 
 #full{
@@ -63,21 +68,20 @@ header h1{
 menu {
     display: flex;
     flex-direction: row;
-    gap: 72px;
     border-radius: 16px;
     padding: 15px 40px;
     background-color: var(--bg-color-2);
+    justify-content: space-around;
     align-items: center;
 }
 
 .card{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    break-inside: avoid;
+    margin-bottom: 24px;
     padding: 20px 20px;
     border-radius: 40px;
     background: var(--Background-2, #E6DAD7);
-    width: 560px;
+    max-width: 560px;
 }
 
 .start-end{
@@ -143,6 +147,7 @@ menu {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    margin-bottom: 20px;
 }
 
 #game *{
@@ -150,9 +155,7 @@ menu {
 }
 
 main{
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
+    gap: 32px;
 }
 
 #time, #score{
@@ -258,13 +261,14 @@ footer #logo{
 
 footer #to_right p{
     display: flex;
-    gap: 20px;
-    padding: 20px 60px;
+    gap: 12px;
+    height: 78 px;
+    padding: 24px 60px;
     background: var(--button, #CCAFA5);
     align-self: stretch;
     border-radius: 20px;
     justify-content: center;
-    
+    align-items:center; 
 }
 
 #to_right {

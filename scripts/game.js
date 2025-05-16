@@ -50,7 +50,7 @@ function spawnHeart(index) {
     hearts[index] = new Heart(x, y, color, false, value);
 
     let img = document.createElement("img");
-    img.src = `images/heart-${hearts[index].color}.svg`;
+    img.src = `../images/heart-${hearts[index].color}.svg`;
     img.style.position = "absolute";
     img.style.left = hearts[index].x + "px";
     img.style.top = hearts[index].y + "px";
@@ -90,7 +90,7 @@ function shoot() {
 
 
     let arrow_img = document.createElement("img");
-    arrow_img.src = "images/arrow-heart.svg";
+    arrow_img.src = "../images/arrow-heart.svg";
     arrow_img.style.position = "absolute";
     arrow_img.style.width = "21px";
     arrow_img.style.height = "18px";

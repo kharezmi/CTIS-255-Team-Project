@@ -8,9 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
-    <link href="css/love_confessions.css" rel="stylesheet">
+    <link href="../css/love_confessions.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="scripts/game.js"></script>
+    <script src="../scripts/confessions-data.js"></script>
+    <script src="../scripts/cards.js"></script>
+    <script src="../scripts/game.js"></script>
 </head>
 
 <body>
@@ -18,44 +20,22 @@
         <header>
             <h1>BILCONFESS</h1>
             <menu>
-                <h2>feed</h2>
-                <h2>submit a post</h2>
-                <h2>love confessions</h2>
-                <h2>make-a-friend</h2>
-                <h2>news</h2>
-                <img class="icon" src="images/iconamoon-mode-dark.svg">
+                <a>feed</a>
+                <a>submit a post</a>
+                <a>love confessions</a>
+                <a>make-a-friend</a>
+                <a>news</a>
+                <img class="icon" src="../images/iconamoon-mode-dark.svg">
             </menu>
         </header>
         <main>
-            <div class="card">
-                <div class="start-end">
-                    <p>From : unknown</p>
-                    <p>Mon Feb 24</p>
-                </div>
-                <div id="middle">
-                    <p>Good day, teacher. I am looking for a male roommate for a 2+1 house in 100. Yıl Workers' Blocks. The
-                        rent is 12 thousand per person. Those who are interested can write to me.</p>
-                </div>
-                <div class="start-end">
-                    <div id="comment">
-                        <img class="icon" src="images/icons.svg">
-                        <p>31</p>
-                    </div>
-                    <div id="react">
-                        <div>
-                            <img class="icon" src="images/like.svg">
-                            <img class="icon" src="images/dislike.svg">
-                        </div>
-                        <div><p>23/2</p></div>
-                    </div>
-                </div>
-            </div>
-            <div id="game">
+            <div id="confessions">
+                <div id="game">
     
-                <img id="cloud1" src="images/cloud1.svg">
-                <img id="cloud2" src="images/cloud2.svg">
-                <img id="cloud3" src="images/cloud3.svg">
-                <img id="bow" src="images/bow-arrow-heart.svg">
+                <img id="cloud1" src="../images/cloud1.svg">
+                <img id="cloud2" src="../images/cloud2.svg">
+                <img id="cloud3" src="../images/cloud3.svg">
+                <img id="bow" src="../images/bow-arrow-heart.svg">
                 <div id="game_interface_top">
                     <div id="time">
                         <h3>Time left<br>00:<span id="sec">30</span></h3>
@@ -74,18 +54,20 @@
                         <div id="game_moving_left">
                             <p>Left</p>
                             <button id="left" type="button">
-                                <img src="images/arrow-left.svg">
+                                <img src="../images/arrow-left.svg">
                             </button>
                         </div>
                         <div id="game_moving_right">
                             <p>Right</p>
                             <button id="right" type="button">
-                                <img src="images/arrow-right.svg">
+                                <img src="../images/arrow-right.svg">
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
+            </div>
+            
         </main>
         <footer>
             <div id="footer_top">
@@ -94,16 +76,16 @@
                 </div>
                 <div id="to_right">
                     <p>Contact Us: email@email.com</p>
-                    <p>Our socials <img class="icon" src="images/mdi-instagram.svg"></p>
+                    <p>Our socials <img class="icon" src="../images/mdi-instagram.svg"></p>
                 </div>
             </div>
             <div id="line">
-                <p>Home Page</p>
-                <p>Feed</p>
-                <p>Current News</p>
-                <p>Submit A Confession</p>
-                <p>Love Confessions</p>
-                <p>Make-A-Friend</p>
+                <a>Home Page</a>
+                <a>Feed</a>
+                <a>Current News</a>
+                <a>Submit A Confession</a>
+                <a>Love Confessions</a>
+                <a>Make-A-Friend</a>
             </div>
             <div id="dark">
                 <p>
