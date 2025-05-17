@@ -1,0 +1,61 @@
+:root {
+  --light-bg-color-1: #ffffff;
+  --light-bg-color-2: #e6dad7;
+  --light-text: #7f655c;
+  --light-button: #ccafa5;
+  --light-border: #a9887c;
+  --light-bow: #7c5e53;
+  --light-button-alt: #a9887c;
+  --light-text-alt: #ffffff;
+  --light-game-white: #ffffff;
+  --light-hearts-1: #ff6ba4;
+  --light-hearts-2: #ff9cb8;
+
+  --dark-bg-color-1: #56423b;
+  --dark-bg-color-2: #8a6c61;
+  --dark-text: #ffffff;
+  --dark-button: #ccafa5;
+  --dark-border: #a9887c;
+  --dark-bow: #7c5e53;
+  --dark-button-alt: #f2dbd3;
+  --dark-text-alt: #7f655c;
+  --dark-game-white: #ffffff;
+  --dark-hearts-1: #ff6ba4;
+  --dark-hearts-2: #ff9cb8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Darker Grotesque", sans-serif;
+  color: var(--light-text, #ffffff);
+}
+
+.dark-mode{
+    background-color: var(--dark-bg-color-1, #56423b);
+}
+
+.dark-mode *{
+    color: var(--dark-text, #ffffff);
+}
+
+.dark-mode #dark {
+    background-color: var(--dark-button-alt, #f2dbd3);
+}
+
+.dark-mode #dark *{
+    color: var(--dark-text-alt, #7f655c);
+}
+
+.dark-mode button{
+    background-color: var(--dark-button, #ccafa5);
+}
+
+.dark-mode footer {
+    background-color: var(--dark-bg-color-2, #8a6c61);
+    
+}
+
+.dark-mode form {
+    border: var(--dark-border, #a9887c);
+}

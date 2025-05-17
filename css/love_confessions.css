@@ -1,23 +1,4 @@
-:root {
-  --bg-color-1: #ffffff;
-  --bg-color-2: #e6dad7;
-  --text: #7f655c;
-  --button: #ccafa5;
-  --border: #a9887c;
-  --bow: #7c5e53;
-  --button-alt: #a9887c;
-  --text-alt: #ffffff;
-  --game-white: #ffffff;
-  --hearts-1: #ff6ba4;
-  --hearts-2: #ff9cb8;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Darker Grotesque", sans-serif;
-  color: var(--text);
-}
+@import url('/css/common.css');
 
 .h1 {
   font-size: 48px;
@@ -54,7 +35,7 @@ p {
   width: 1136px;
   padding: 32px 152px 65px 152px;
   gap: 48px;
-  background-color: var(--bg-color-1, #ffffff);
+  background-color: var(--light-bg-color-1, #ffffff);
 }
 
 header {
@@ -69,7 +50,7 @@ menu {
   flex-direction: row;
   border-radius: 16px;
   padding: 15px 40px;
-  background-color: var(--bg-color-2);
+  background-color: var(--light-bg-color-2, #e6dad7);
   justify-content: space-around;
   align-items: center;
   margin-top: 20px;
@@ -81,7 +62,7 @@ menu {
   margin-bottom: 20px;
   padding: 20px 20px;
   border-radius: 40px;
-  background: var(--Background-2, #e6dad7);
+  background: var(--light-bg-color-2, #e6dad7);
   max-width: 560px;
 }
 
@@ -140,7 +121,7 @@ menu {
   width: 560px;
   height: 560px;
   border-radius: 40px;
-  background: var(--Background-2, #e6dad7);
+  background: var(--light-bg-color-2, #e6dad7);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -181,10 +162,10 @@ h3 {
 }
 
 #game button {
-  background: var(--game-white, #fff);
+  background: var(--light-game-white, #fff);
   border-radius: 8px;
   height: 32px;
-  border-color: var(--game-white, #fff);
+  border-color: var(--light-game-white, #fff);
   width: 32px;
   display: flex;
   justify-content: center;
@@ -245,7 +226,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background: var(--bg-color-2, #e6dad7);
+  background: var(--light-bg-color-2, #e6dad7);
 }
 
 footer div {
@@ -257,7 +238,7 @@ footer div {
 footer #logo {
   width: 368px;
   height: 176px;
-  background: var(--button, #ccafa5);
+  background: var(--light-button, #ccafa5);
   border-radius: 20px;
 }
 
@@ -266,7 +247,7 @@ footer #to_right p {
   gap: 12px;
   height: 78 px;
   padding: 24px 60px;
-  background: var(--button, #ccafa5);
+  background: var(--light-button, #ccafa5);
   align-self: stretch;
   border-radius: 20px;
   justify-content: center;
@@ -289,18 +270,18 @@ footer #to_right p {
   padding: 10px 60px;
   justify-content: space-between;
   border-radius: 20px;
-  background: var(--button, #ccafa5);
+  background: var(--light-button, #ccafa5);
 }
 
 #dark {
   align-items: center;
   border-radius: 20px;
-  background: var(--button-alt, #a9887c);
+  background: var(--light-button-alt, #a9887c);
   padding: 10px 60px;
 }
 
 #dark * {
-  color: var(--text-alt, #fff);
+  color: var(--light-text-alt, #fff);
 }
 
 .arrow {
