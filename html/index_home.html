@@ -1,75 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Page</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../css/home.css" />
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <script src="../scripts/functions.js"></script>
+  </head>
 
-  <script src="../scripts/functions.js"></script>
-</head>
+  <body>
+    <div class="container">
+      <div id="title">
+        <a href="../html/index_home.html" id="titleConfess">BILCONFESS</a>
+      </div>
+      <div id="navBar">
+        <a class="nav" href="../html/feed.html">FEED</a>
+        <a class="nav" href="">SUBMIT A POST</a>
+        <a class="nav" href="../html/love_confessions.html" target="_blank"
+          >LOVE CONFESSIONS</a
+        >
+        <a class="nav" href="../html/make_a_friend.html">MAKE-A-FRIEND</a>
+        <a class="nav" href="news.html">NEWS</a>
+        <img src="../images/iconamoon-mode-dark.svg" alt="" id="darkMode" />
+      </div>
 
-<body>
-  <div class="container">
-    <div id="title"><a href="../html/index_home.html" id="titleConfess">BILCONFESS</a></div>
-    <div id="navBar">
-      <a class="nav" href="../html/feed.html">FEED</a>
-      <a class="nav" href="">SUBMIT A POST</a>
-      <a class="nav" href="../html/love_confessions.html" target="_blank">LOVE CONFESSIONS</a>
-      <a class="nav" href="../html/make_a_friend.html">MAKE-A-FRIEND</a>
-      <a class="nav" href="news.html">NEWS</a>
-      <img src="../images/iconamoon-mode-dark.svg" alt="" id="darkMode">
-    </div>
+      <script>
+        const dark = document.getElementById("darkMode");
 
-    <script>
+        let isDark = false;
 
-      var dark = document.getElementById("darkMode");
+        dark.addEventListener("click", function () {
+          isDark = !isDark;
 
-      dark.addEventListener("click", function () {
+          const body = document.body;
+          const cont = document.getElementsByClassName("container")[0];
+          const title = document.getElementById("titleConfess");
+          const confessCont = document.getElementsByClassName("confess");
+          const paragraphs = document.getElementsByClassName("para");
+          const nav = document.getElementById("navBar");
+          const navLinks = document.getElementsByClassName("nav");
+          const foot = document.querySelector("footer");
 
-        var cont = document.getElementsByClassName("container")[0];
-        cont.style.backgroundColor = "#322622";
-        document.body.style.backgroundColor = "#322622";
+          if (isDark) {
+            cont.style.backgroundColor = "#322622";
+            body.style.backgroundColor = "#322622";
+            title.style.color = "#E6DAD7";
+            nav.style.backgroundColor = "rgb(164, 137, 126)";
+            foot.style.backgroundColor = "#A9887C";
 
-        var title = document.getElementById("titleConfess");
-        title.style.color = "#E6DAD7";
+            for (let i = 0; i < confessCont.length; i++) {
+              confessCont[i].style.backgroundColor = "rgb(164, 137, 126)";
+              confessCont[i].style.color = "#E6DAD7";
+              paragraphs[i].style.color = "#E6DAD7";
+            }
 
-        var confessCont = document.getElementsByClassName("confess");
-        var paragraphs = document.getElementsByClassName("para");
+            for (let link of navLinks) {
+              link.style.color = "#E6DAD7";
+            }
+          } else {
+            cont.style.backgroundColor = "#FFFFFF";
+            body.style.backgroundColor = "#FFFFFF";
+            title.style.color = "rgb(126, 102, 94)";
+            nav.style.backgroundColor = "#E6DAD7";
+            foot.style.backgroundColor = "#E6DAD7";
 
-        for (let i = 0; i < confessCont.length; i++){
-          confessCont[i].style.backgroundColor = "rgb(164, 137, 126)";
-          confessCont[i].style.color = "#E6DAD7";
-          paragraphs[i].style.color = "#E6DAD7";
-        }
+            for (let i = 0; i < confessCont.length; i++) {
+              confessCont[i].style.backgroundColor = "#E6DAD7";
+              confessCont[i].style.color = "#7e665e";
+              paragraphs[i].style.color = "#7F655C";
+            }
 
-        var nav = document.getElementById("navBar");
-        nav.style.backgroundColor = "rgb(164, 137, 126)";
-        
-        var navLinks = document.getElementsByClassName("nav");
-
-        for(let link of navLinks){
-          link.style.color = "#E6DAD7";
-        }
-
-        var foot = document.querySelector("footer");
-        foot.style.backgroundColor = "#A9887C";
-
-      });
-
-
+            for (let link of navLinks) {
+              link.style.color = "rgb(126, 102, 94)";
+            }
+          }
+        });
       </script>
 
-    <div class="content">
+      <div class="content">
+
         <div class="cols" id="left">
+          <h1 class="trending" style="text-align: center; height: 45px; background-color: #a78d85; border-radius: 50px; width: 50%; margin: 0 auto;">Trending</h1>
           <div class="confess">
             <div class="confessContent">
               <div>From: Unknown</div>
@@ -134,9 +165,13 @@
               </div>
             </div>
           </div>
+
+          <h1 class="trending" style="text-align: center; background-color: #a78d85; border-radius: 50px; height:50px; width: 50%; margin: 0 auto;">See more</h1>
         </div>
 
         <div class="cols" id="right">
+          <br>
+          <br>
           <div class="confess">
             <div class="confessContent">
               <div>From: Unknown</div>
@@ -206,7 +241,6 @@
         </div>
       </div>
 
-
       <footer>
         <div id="topFooter">
           <div id="leftSocial">
@@ -226,7 +260,9 @@
           <a href="">Feed</a>
           <a href="">Current News</a>
           <a href="">Submit a Confession</a>
-          <a href="../love_confessions.html" target="_blank">Love Confessions</a>
+          <a href="../love_confessions.html" target="_blank"
+            >Love Confessions</a
+          >
           <a href="">Make-a-Friend</a>
         </div>
         <div id="bottomFooter">
@@ -235,9 +271,7 @@
             <a>Copyright @ 2025</a>
           </p>
         </div>
+      </div>
       </footer>
-    </div>
-
-    </body>
-
+  </body>
 </html>

@@ -266,4 +266,8 @@ span#hello {
     align-items: center;
   }
 }
-    
+
+
+.trending {
+  color: #f8eae7;
+}
