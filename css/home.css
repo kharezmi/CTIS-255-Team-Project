@@ -33,7 +33,7 @@ body {
 #navBar {
   margin: 10px auto;
   background-color: #E6DAD7;
-  width: 79%;
+  width: 70%;
   height: 40px;
   border-radius: 16px;
   text-align: center;
@@ -62,7 +62,8 @@ a {
   flex-direction: row;
   justify-content: center;
   margin-top: 5px;
-  width: 79%;
+  width: 65%;
+  margin: 0 auto;
 }
 
 .cols {
@@ -74,14 +75,16 @@ a {
 
 .confess {
   background-color: #E6DAD7;
-  width: 565px;
+  /* width: 565px; */ /* Remove this line */
+  width: 100%;        /* Add this line */
   border-radius: 40px;
   padding: 25px;
   margin: 10px;
   position: relative;
-  top: 5px;
+  top: 2px;
   font-size: 24px;
   font-weight: 500;
+  
 }
 
 .confessContent {
@@ -90,10 +93,11 @@ a {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  height: 32px;
+  height: 50px;
   font-size: 24px;
   font-weight: 500;
   padding: 5px;
+  
 }
 
 .confessContent i {
@@ -115,9 +119,16 @@ i#dark {
   color: #7F655C;
 }
 
-div#left, div#right {
-  position: relative;
-  top: 5px;
+#left {
+  flex: 1;
+  min-width: 0; /* Prevent overflow */
+  margin-right: 100px;  
+}
+
+#right {
+
+  min-width: 0; /* Prevent overflow */
+  max-width: 350px; /* Optional: limit max width */
 }
 
 footer {
@@ -126,7 +137,7 @@ footer {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  width: 81%;
+  width: 70%;
   font-size: 20px;
   height: 81%;
   padding: 13px;
@@ -243,6 +254,10 @@ span#hello {
   .content {
     flex-direction: column;
     align-items: center;
+    
+  }
+  #left {
+    margin-right: 0px;
   }
 
   .confess {
