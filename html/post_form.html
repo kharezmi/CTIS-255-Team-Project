@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit a Post | BILCONFESS</title>
+
+    <link rel="stylesheet" href="../css/materialize.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/post_form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="title">
+        <a href="../html/index_home.html" id="titleConfess">BILCONFESS</a>
+      </div>
+      <div id="navBar">
+        <a class="nav" href="../html/feed.html">FEED</a>
+        <a class="nav" href="">SUBMIT A POST</a>
+        <a class="nav" href="../html/love_confessions.html" target="_blank"
+          >LOVE CONFESSIONS</a
+        >
+        <a class="nav" href="../html/make_a_friend.html">MAKE-A-FRIEND</a>
+        <a class="nav" href="news.html">NEWS</a>
+        <img src="../images/iconamoon-mode-dark.svg" alt="" id="darkMode" />
+      </div>
+
+      <script>
+        const dark = document.getElementById("darkMode");
+
+        let isDark = false;
+
+        dark.addEventListener("click", function () {
+          isDark = !isDark;
+
+          const body = document.body;
+          const cont = document.getElementsByClassName("container")[0];
+          const title = document.getElementById("titleConfess");
+          const confessCont = document.getElementsByClassName("confess");
+          const paragraphs = document.getElementsByClassName("para");
+          const nav = document.getElementById("navBar");
+          const navLinks = document.getElementsByClassName("nav");
+          const foot = document.querySelector("footer");
+
+          if (isDark) {
+            cont.style.backgroundColor = "#322622";
+            body.style.backgroundColor = "#322622";
+            title.style.color = "#E6DAD7";
+            nav.style.backgroundColor = "rgb(164, 137, 126)";
+            foot.style.backgroundColor = "#A9887C";
+
+            for (let i = 0; i < confessCont.length; i++) {
+              confessCont[i].style.backgroundColor = "rgb(164, 137, 126)";
+              confessCont[i].style.color = "#E6DAD7";
+              paragraphs[i].style.color = "#E6DAD7";
+            }
+
+            for (let link of navLinks) {
+              link.style.color = "#E6DAD7";
+            }
+          } else {
+            cont.style.backgroundColor = "#FFFFFF";
+            body.style.backgroundColor = "#FFFFFF";
+            title.style.color = "rgb(126, 102, 94)";
+            nav.style.backgroundColor = "#E6DAD7";
+            foot.style.backgroundColor = "#E6DAD7";
+
+            for (let i = 0; i < confessCont.length; i++) {
+              confessCont[i].style.backgroundColor = "#E6DAD7";
+              confessCont[i].style.color = "#7e665e";
+              paragraphs[i].style.color = "#7F655C";
+            }
+
+            for (let link of navLinks) {
+              link.style.color = "rgb(126, 102, 94)";
+            }
+          }
+        });
+      </script>
+    </div>
+    <div class="form-section">
+      <div class="photo-box" style="position: relative">
+        <span class="close">&times;</span>
+        <img
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+          alt="Uploaded Photo"
+        />
+        <button class="btn waves-effect waves-light">Add</button>
+        <div style="margin-top: 8px; font-weight: bold">Photos</div>
+      </div>
+      <form class="submission-form z-depth-0">
+        <h5 style="font-weight: bold; color: #7e665e">Submission form</h5>
+        <div class="input-field">
+          <input id="nickname" type="text" class="validate" />
+          <label for="nickname" class="active"
+            ><p class="nick" style="font-weight: bold; color: #7e665e">
+              Type your nickname
+            </p></label
+          >
+        </div>
+        <div class="input-field">
+          <select>
+            <option value="" disabled selected>Choose the Topic</option>
+            <option value="love">Love</option>
+            <option value="friendship">Friendship</option>
+            <option value="university">University</option>
+          </select>
+          <label class="active"
+            ><p style="font-weight: bold; color: #7e665e">Topic</p></label
+          >
+        </div>
+        <div class="radio-group">
+          <label style="margin-right: 16px">Hide nickname?</label>
+          <label>
+            <input name="hide_nickname" type="radio" checked />
+            <span>Yes</span>
+          </label>
+          <label>
+            <input name="hide_nickname" type="radio" />
+            <span>No</span>
+          </label>
+        </div>
+        <div class="radio-group">
+          <label style="margin-right: 16px">Add content warning?</label>
+          <label>
+            <input name="content_warning" type="radio" />
+            <span>Yes</span>
+          </label>
+          <label>
+            <input name="content_warning" type="radio" checked />
+            <span>No</span>
+          </label>
+        </div>
+        <div class="input-field">
+          <textarea id="confession" class="materialize-textarea"></textarea>
+          <label for="confession" class="active"><p>Your confession</p></label>
+        </div>
+        <div class="rules-row">
+          <label>
+            <input type="checkbox" />
+            <span>I agree with the rules</span>
+          </label>
+          <button class="btn waves-effect waves-light" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <footer class="footer-main">
+      <div class="footer-row">
+        <div class="footer-col"><p>BILCONFESS</p></div>
+        <div class="footer-side-col">
+          <div class="footer-contact">Contact Us: email@email.com</div>
+          <div class="footer-social">
+            Our Socials
+            <i class="material-icons" style="font-size: 1.3rem">&#xe250;</i>
+          </div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index_home.html">Home Page</a>
+        <a href="feed.html">Feed</a>
+        <a href="news.html">Current News</a>
+        <a href="post_form.html">Submit A Confession</a>
+        <a href="love_confessions.html">Love Confessions</a>
+        <a href="make_a_friend.html">Make-A-Friend</a>
+      </div>
+      <div class="footer-bottom">
+        Terms of Use | Privacy Policy | Copyright © 2025
+      </div>
+    </footer>
+    <script src="../scripts/materialize.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll("select");
+        M.FormSelect.init(elems);
+      });
+    </script>
+  </body>
+</html>

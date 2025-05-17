@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   font-family: "Darker Grotesque", sans-serif;
@@ -8,7 +8,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   color: #7e665e;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +32,7 @@ body {
 
 #navBar {
   margin: 10px auto;
-  background-color: #E6DAD7;
+  background-color: #e6dad7;
   width: 70%;
   height: 40px;
   border-radius: 16px;
@@ -42,7 +42,7 @@ body {
   justify-content: space-evenly;
   font-weight: bold;
   font-size: 24px;
-  padding: 8px 30px;
+  padding: 8px 45px;
 }
 
 #navBar img {
@@ -74,9 +74,8 @@ a {
 }
 
 .confess {
-  background-color: #E6DAD7;
-  /* width: 565px; */ /* Remove this line */
-  width: 100%;        /* Add this line */
+  background-color: #e6dad7;
+  width: 100%;
   border-radius: 40px;
   padding: 25px;
   margin: 10px;
@@ -84,7 +83,6 @@ a {
   top: 2px;
   font-size: 24px;
   font-weight: 500;
-  
 }
 
 .confessContent {
@@ -97,7 +95,6 @@ a {
   font-size: 24px;
   font-weight: 500;
   padding: 5px;
-  
 }
 
 .confessContent i {
@@ -116,23 +113,21 @@ i#dark {
 }
 
 .confess p {
-  color: #7F655C;
+  color: #7f655c;
 }
 
 #left {
   flex: 1;
-  min-width: 0; /* Prevent overflow */
-  margin-right: 100px;  
+  margin-right: 100px;
 }
 
 #right {
-
-  min-width: 0; /* Prevent overflow */
-  max-width: 350px; /* Optional: limit max width */
+  min-width: 0;
+  max-width: 350px;
 }
 
 footer {
-  background-color: #E6DAD7;
+  background-color: #e6dad7;
   border-radius: 40px;
   margin-top: 50px;
   display: flex;
@@ -152,8 +147,8 @@ footer {
   max-height: max-content;
 }
 
-#topFooter>div#leftSocial {
-  background-color: #CCAFA5;
+#topFooter > div#leftSocial {
+  background-color: #ccafa5;
   border-radius: 20px;
   width: 368px;
   height: 176px;
@@ -166,14 +161,14 @@ footer {
   max-width: 100%;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: flex-end;
   padding: 10px;
 }
 
 #rightSocial > div {
   border-radius: 20px;
-  background-color: #CCAFA5;
+  background-color: #ccafa5;
   width: 100%;
   height: 77px;
   display: flex;
@@ -196,7 +191,7 @@ footer {
 
 #middleFooter {
   text-align: center;
-  background-color: #CCAFA5;
+  background-color: #ccafa5;
   border-radius: 13px;
   display: flex;
   flex-direction: row;
@@ -215,7 +210,7 @@ footer {
   justify-content: center;
   margin: 8px 10px;
   padding: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
   align-items: center;
 }
 
@@ -224,12 +219,11 @@ footer {
 }
 
 #middleFooter a {
-  color: #7F655C;
+  color: #7f655c;
 }
 
 #bottomFooter a {
-  color: #FFFFFF;
-
+  color: #ffffff;
 }
 
 footer a:hover {
@@ -249,12 +243,10 @@ span#hello {
   font-size: 15px;
 }
 
-
 @media screen and (max-width: 768px) {
   .content {
     flex-direction: column;
     align-items: center;
-    
   }
   #left {
     margin-right: 0px;
@@ -274,14 +266,11 @@ span#hello {
     width: 100%;
   }
 
-  
-
   #topFooter {
     flex-direction: column;
     align-items: center;
   }
 }
-
 
 .trending {
   color: #f8eae7;
