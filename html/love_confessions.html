@@ -1,102 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Love confessions</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
-    <link href="../css/love_confessions.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../css/love_confessions.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../scripts/confessions-data.js"></script>
     <script src="../scripts/cards.js"></script>
     <script src="../scripts/game.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="full">
-        <header>
-            <a class="h1">BILCONFESS</a>
-            <menu>
-                <a href="feed.html">feed</a>
-                <a>submit a post</a>
-                <a>love confessions</a>
-                <a href="make_a_friend.html">make-a-friend</a>
-                <a>news</a>
-                <img class="icon" src="../images/iconamoon-mode-dark.svg">
-            </menu>
-        </header>
-        <main> 
-            <div id="game">
-    
-                <img id="cloud1" src="../images/cloud1.svg">
-                <img id="cloud2" src="../images/cloud2.svg">
-                <img id="cloud3" src="../images/cloud3.svg">
-                <img id="bow" src="../images/bow-arrow-heart.svg">
-                <div id="game_interface_top">
-                    <div id="time">
-                        <h3>Time left<br>00:<span id="sec">30</span></h3>
-                    </div>
-                    <div id="score">
-                        <h3>Score<br><span id="score-number">0</span></h3>
-                    </div>
-                </div>
-                
-                <div id="game_interface_bottom">
-                    <div id="shoot">
-                        <p>Shoot</p>
-                        <button type="button"></button>
-                    </div>
-                    <div id="moving">
-                        <div id="game_moving_left">
-                            <p>Left</p>
-                            <button id="left" type="button">
-                                <img src="../images/arrow-left.svg">
-                            </button>
-                        </div>
-                        <div id="game_moving_right">
-                            <p>Right</p>
-                            <button id="right" type="button">
-                                <img src="../images/arrow-right.svg">
-                            </button>
-                        </div>
-                    </div>
-                </div>
+      <header>
+        <a class="h1" href="index_home.html">BILCONFESS</a>
+        <menu>
+          <a href="feed.html">feed</a>
+          <a href="post_form.html">submit a post</a>
+          <a href="love_confessions.html">love confessions</a>
+          <a href="make_a_friend.html">make-a-friend</a>
+          <a href="news.html">news</a>
+          <img class="icon" src="../images/iconamoon-mode-dark.svg" />
+        </menu>
+      </header>
+      <main>
+        <div id="game">
+          <img id="cloud1" src="../images/cloud1.svg" />
+          <img id="cloud2" src="../images/cloud2.svg" />
+          <img id="cloud3" src="../images/cloud3.svg" />
+          <img id="bow" src="../images/bow-arrow-heart.svg" />
+          <div id="game_interface_top">
+            <div id="time">
+              <h3>Time left<br />00:<span id="sec">30</span></h3>
             </div>
-            <div id="confessions">
+            <div id="score">
+              <h3>Score<br /><span id="score-number">0</span></h3>
             </div>
-            
-        </main>
-        <footer>
-            <div id="footer_top">
-                <div id="logo">
-                    <a class="h1">BILCONFESS</a>
-                </div>
-                <div id="to_right">
-                    <p>Contact Us: email@email.com</p>
-                    <p>Our socials <img class="icon" src="../images/mdi-instagram.svg"></p>
-                </div>
-            </div>
-            <div id="line">
-                <a>Home Page</a>
-                <a>Feed</a>
-                <a>Current News</a>
-                <a>Submit A Confession</a>
-                <a>Love Confessions</a>
-                <a>Make-A-Friend</a>
-            </div>
-            <div id="dark">
-                <p>
-                    <a>Terms of Use</a> |
-                    <a>Privacy Policy</a> |
-                    <a>Copyright@2025</a>
-                </p>
-            </div>
-        </footer>
-    </div>
-    
-</body>
+          </div>
 
+          <div id="game_interface_bottom">
+            <div id="shoot">
+              <p>Shoot</p>
+              <button type="button"></button>
+            </div>
+            <div id="moving">
+              <div id="game_moving_left">
+                <p>Left</p>
+                <button id="left" type="button">
+                  <img src="../images/arrow-left.svg" />
+                </button>
+              </div>
+              <div id="game_moving_right">
+                <p>Right</p>
+                <button id="right" type="button">
+                  <img src="../images/arrow-right.svg" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="confessions"></div>
+      </main>
+      <footer>
+        <div id="footer_top">
+          <div id="logo">
+            <a class="h1">BILCONFESS</a>
+          </div>
+          <div id="to_right">
+            <p>Contact Us: email@email.com</p>
+            <p>
+              Our socials <img class="icon" src="../images/mdi-instagram.svg" />
+            </p>
+          </div>
+        </div>
+        <div id="line">
+          <a>Home Page</a>
+          <a>Feed</a>
+          <a>Current News</a>
+          <a>Submit A Confession</a>
+          <a>Love Confessions</a>
+          <a>Make-A-Friend</a>
+        </div>
+        <div id="dark">
+          <p>
+            <a>Terms of Use</a> | <a>Privacy Policy</a> |
+            <a>Copyright@2025</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
