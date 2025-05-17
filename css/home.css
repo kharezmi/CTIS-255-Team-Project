@@ -1,0 +1,269 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+body {
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #7e665e;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  font-weight: bold;
+  color: rgb(126, 102, 94);
+  text-align: center;
+  font-size: 48px;
+  text-decoration: none;
+  margin-bottom: 1px;
+}
+
+#navBar {
+  margin: 10px auto;
+  background-color: #E6DAD7;
+  width: 79%;
+  height: 40px;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 8px 30px;
+}
+
+#navBar img {
+  position: relative;
+  right: 10px;
+  top: 2px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(126, 102, 94);
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5px;
+  width: 79%;
+}
+
+.cols {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 1px;
+}
+
+.confess {
+  background-color: #E6DAD7;
+  width: 565px;
+  border-radius: 40px;
+  padding: 25px;
+  margin: 10px;
+  position: relative;
+  top: 5px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.confessContent {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  height: 32px;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.confessContent i {
+  font-size: 12px;
+}
+
+.confessContent img {
+  margin-bottom: -5px;
+  margin-left: 1px;
+  width: 23px;
+  height: 23px;
+}
+
+i#dark {
+  font-size: 15px;
+}
+
+.confess p {
+  color: #7F655C;
+}
+
+div#left, div#right {
+  position: relative;
+  top: 5px;
+}
+
+footer {
+  background-color: #E6DAD7;
+  border-radius: 40px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 81%;
+  font-size: 20px;
+  height: 81%;
+  padding: 13px;
+}
+
+#topFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 10px;
+  align-items: center;
+  max-height: max-content;
+}
+
+#topFooter>div#leftSocial {
+  background-color: #CCAFA5;
+  border-radius: 20px;
+  width: 368px;
+  height: 176px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#rightSocial {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end;
+  padding: 10px;
+}
+
+#rightSocial > div {
+  border-radius: 20px;
+  background-color: #CCAFA5;
+  width: 100%;
+  height: 77px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 24px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.social-box img {
+  margin: -5px 10px;
+}
+
+#leftSocial h1 {
+  text-align: center;
+  font-size: 50px;
+  color: rgb(103, 84, 77);
+}
+
+#middleFooter {
+  text-align: center;
+  background-color: #CCAFA5;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 7px 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+#bottomFooter {
+  text-align: center;
+  background-color: rgb(164, 137, 126);
+  border-radius: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 8px 10px;
+  padding: 10px;
+  color: #FFFFFF;
+  align-items: center;
+}
+
+#bottomFooter p {
+  margin: 0;
+}
+
+#middleFooter a {
+  color: #7F655C;
+}
+
+#bottomFooter a {
+  color: #FFFFFF;
+
+}
+
+footer a:hover {
+  color: #f0efe7;
+}
+
+.navBar a:hover {
+  color: rgb(66, 54, 50);
+}
+
+span#hello {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#hello i {
+  font-size: 15px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .confess {
+    width: 90%;
+  }
+
+  #navBar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  
+
+  #topFooter {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+    
