@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/feed.css" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <script src="../scripts/functions.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div id="title"><a href="../html/index_home.html" id="titleConfess">BILCONFESS</a></div>
+    <div id="navBar">
+      <a class="nav" href="../html/feed.html">FEED</a>
+      <a class="nav" href="">SUBMIT A POST</a>
+      <a class="nav" href="../html/love_confessions.html" target="_blank">LOVE CONFESSIONS</a>
+      <a class="nav" href="../html/make_a_friend.html">MAKE-A-FRIEND</a>
+      <a class="nav" href="../html/news.html">NEWS</a>
+      <img src="../images/iconamoon-mode-dark.svg" alt="" id="darkMode">
+    </div>
+
+    <script>
+
+      var dark = document.getElementById("darkMode");
+
+      dark.addEventListener("click", function () {
+
+        var cont = document.getElementsByClassName("container")[0];
+        cont.style.backgroundColor = "#322622";
+        document.body.style.backgroundColor = "#322622";
+
+        var title = document.getElementById("titleConfess");
+        title.style.color = "#E6DAD7";
+
+        var confessCont = document.getElementsByClassName("confess");
+        var paragraphs = document.getElementsByClassName("para");
+
+        for (let i = 0; i < confessCont.length; i++){
+          confessCont[i].style.backgroundColor = "rgb(164, 137, 126)";
+          confessCont[i].style.color = "#E6DAD7";
+          paragraphs[i].style.color = "#E6DAD7";
+        }
+
+        var nav = document.getElementById("navBar");
+        nav.style.backgroundColor = "rgb(164, 137, 126)";
+        
+        var navLinks = document.getElementsByClassName("nav");
+
+        for(let link of navLinks){
+          link.style.color = "#E6DAD7";
+        }
+
+        var foot = document.querySelector("footer");
+        foot.style.backgroundColor = "#A9887C";
+
+      });
+
+
+      </script>
+
+
+
+    </body>
+
+</html>

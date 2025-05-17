@@ -4,6 +4,8 @@
   font-size: 48px;
   line-height: 0px;
   font-weight: bold;
+  text-decoration: none;
+
 }
 
 menu a {
@@ -13,6 +15,7 @@ menu a {
   font-weight: 700;
   text-transform: uppercase;
   justify-self: center;
+  text-decoration: none;
 }
 
 a,

@@ -1,236 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="../scripts/functions.js"></script>
+    <link rel="stylesheet" href="../css/feed.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Feed</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="../scripts/functions.js"></script>
-  <link rel="stylesheet" href="../css/feed.css" />
-</head>
+  <body>
+    <div class="container">
+      <div id="title">
+        <a href="../html/index_home.html" id="titleConfess">BILCONFESS</a>
+      </div>
+      <div id="navBar">
+        <a class="nav" href="../html/feed.html">FEED</a>
+        <a class="nav" href="">SUBMIT A POST</a>
+        <a class="nav" href="../html/love_confessions.html" target="_blank"
+          >LOVE CONFESSIONS</a
+        >
+        <a class="nav" href="../html/make_a_friend.html">MAKE-A-FRIEND</a>
+        <a class="nav" href="../html/news.html">NEWS</a>
+        <img src="../images/iconamoon-mode-dark.svg" alt="" id="darkMode" />
+      </div>
 
-<body>
-  <div class="container">
-    <div id="title"><a href="main.html" id="titleConfess">BILCONFESS</a></div>
-    <div id="navBar">
-      <a class="nav" href="feed.html">FEED</a>
-      <a class="nav" href="">SUBMIT A POST</a>
-      <a class="nav" href="../love_confessions.html">LOVE CONFESSIONS</a>
-      <a class="nav" href="../html/make_a_friend.html">MAKE-A-FRIEND</a>
-      <a class="nav" href="">NEWS</a>
-      <img src="../images/iconamoon-mode-dark.svg" alt="" id="darkMode">
+      <script>
+        var dark = document.getElementById("darkMode");
+
+        dark.addEventListener("click", function () {
+          var cont = document.getElementsByClassName("container")[0];
+          cont.style.backgroundColor = "#322622";
+          document.body.style.backgroundColor = "#322622";
+
+          var title = document.getElementById("titleConfess");
+          title.style.color = "#E6DAD7";
+
+          var confessCont = document.getElementsByClassName("confess");
+          var paragraphs = document.getElementsByClassName("para");
+
+          for (let i = 0; i < confessCont.length; i++) {
+            confessCont[i].style.backgroundColor = "rgb(164, 137, 126)";
+            confessCont[i].style.color = "#E6DAD7";
+            paragraphs[i].style.color = "#E6DAD7";
+          }
+
+          var nav = document.getElementById("navBar");
+          nav.style.backgroundColor = "rgb(164, 137, 126)";
+
+          var navLinks = document.getElementsByClassName("nav");
+
+          for (let link of navLinks) {
+            link.style.color = "#E6DAD7";
+          }
+
+          var foot = document.querySelector("footer");
+          foot.style.backgroundColor = "#A9887C";
+        });
+      </script>
+
+      <div class="content">
+        <div class="cols" id="left">
+          <div class="confess">
+            <div class="confessContent">
+              <div>From: Unknown</div>
+              <div>Mon Feb 24</div>
+            </div>
+            <p class="para">
+              Hi! I’ve been wanting to get into volleyball more seriously for
+              some time. I’ve played a bit before, but not on a professional
+              level. I’d really love to improve and practice regularly. It would
+              mean a lot if supportive, non-judgmental friends who are open to
+              helping could reach out. Thank you in advance!
+            </p>
+            <div class="confessContent">
+              <div><img src="../images/icons.svg" alt="" /> 12</div>
+              <div>
+                <img src="../images/like.svg" alt="" />
+                <img src="../images/dislike.svg" alt="" /> 40/4
+              </div>
+            </div>
+          </div>
+          <div class="confess">
+            <div class="confessContent">
+              <div>From: Unknown</div>
+              <div>Fri Mar 14</div>
+            </div>
+            <p class="para">
+              Every time I think about what I said to you, my heart aches. I
+              can’t forget the moments I hurt you. The disappointment I saw in
+              your eyes still haunts me. Even your silence is enough to tear me
+              apart. I know there’s no excuse for the way I treated you, but I
+              regret it deeply from the bottom of my heart. What I said that day
+              didn’t come from anger—it came from a place of helplessness. I
+              hurt the most precious person without understanding them. With
+              every passing day, I realize more how much I love you. Sometimes,
+              I just wish I could hold you and say how truly sorry I am.
+            </p>
+            <div class="confessContent">
+              <div><img src="../images/icons.svg" alt="" /> 39</div>
+              <div>
+                <img src="../images/like.svg" alt="" />
+                <img src="../images/dislike.svg" alt="" /> 120/43
+              </div>
+            </div>
+          </div>
+          <div class="confess">
+            <div class="confessContent">
+              <div>From: Unknown</div>
+              <div>Wed Apr 23</div>
+            </div>
+            <p class="para">
+              Hello, I have wanted to play volleyball for a long time, but I
+              want to do more volleyball training. I played for a while, but not
+              professionally. I want to improve myself. I would be very happy if
+              friends who would not judge me and would help me would write to
+              me.
+            </p>
+            <div class="confessContent">
+              <div><img src="../images/icons.svg" alt="" /> 45</div>
+              <div>
+                <img src="../images/like.svg" alt="" />
+                <img src="../images/dislike.svg" alt="" /> 56/10
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cols" id="right">
+          <div class="confess">
+            <div class="confessContent">
+              <div>From: Unknown</div>
+              <div>Thu May 1</div>
+            </div>
+            <p class="para">
+              I often think that the reason why I cannot make close friends at
+              this school is that I do not smoke. Of course, I have classmates
+              and friends from the club, but they disappear to the smoking area
+              during breaks and all meetings, etc., are arranged there. I am
+              very serious, I will start smoking soon.
+            </p>
+            <div class="confessContent">
+              <div><img src="../images/icons.svg" alt="" /> 198</div>
+              <div>
+                <img src="../images/like.svg" alt="" />
+                <img src="../images/dislike.svg" alt="" /> 200/32
+              </div>
+            </div>
+          </div>
+
+          <div class="confess">
+            <div class="confessContent">
+              <div>From: Unknown</div>
+              <div>Mon Feb 24</div>
+            </div>
+            <p class="para">
+              I shouted at you in G building, I broke your heart, beautiful, and
+              I feel the pain of this more and more every day. At that moment,
+              in my anger, even when I think of you, my eyes fill with tears. I
+              treated you in a way you didn't deserve, I broke the most precious
+              thing, you. Just saying I love you is not enough to express what I
+              feel. I want you to forgive, but I know it won't be easy. What
+              happened with the B cigarette is unforgettable, and neither are
+              you. You are very precious to me, every moment, every second I'm
+              really sorry.
+            </p>
+            <div class="confessContent">
+              <div><img src="../images/icons.svg" alt="" /> 110</div>
+              <div>
+                <img src="../images/like.svg" alt="" />
+                <img src="../images/dislike.svg" alt="" /> 111/27
+              </div>
+            </div>
+          </div>
+
+          <div class="confess">
+            <div class="confessContent">
+              <div>From: Unknown</div>
+              <div>Mon Feb 24</div>
+            </div>
+            <p class="para">
+              Hi! I’ve been wanting to get into volleyball more seriously for
+              some time. I’ve played a bit before, but not on a professional
+              level. I’d really love to improve and practice regularly. It would
+              mean a lot if supportive, non-judgmental friends who are open to
+              helping could reach out. Thank you in advance!
+            </p>
+            <div class="confessContent">
+              <div><img src="../images/icons.svg" alt="" /> 34</div>
+              <div>
+                <img src="../images/like.svg" alt="" />
+                <img src="../images/dislike.svg" alt="" />40/12
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div id="topFooter">
+          <div id="leftSocial">
+            <h1>BILCONFESS</h1>
+          </div>
+          <div id="rightSocial">
+            <div class="social" id="sendMail">Contact Us: email@email.com</div>
+            <div class="social" id="accounts">
+              <p>
+                Our Socials <img src="../images/mdi-instagram.svg" alt="" />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="middleFooter">
+          <a href="">Home Page</a>
+          <a href="">Feed</a>
+          <a href="">Current News</a>
+          <a href="">Submit a Confession</a>
+          <a href="../love_confessions.html" target="_blank"
+            >Love Confessions</a
+          >
+          <a href="">Make-a-Friend</a>
+        </div>
+        <div id="bottomFooter">
+          <p>
+            <a>Terms of Use</a> | <a>Privacy Policy</a> |
+            <a>Copyright @ 2025</a>
+          </p>
+        </div>
+      </footer>
     </div>
-
-    <script>
-      var dark = document.getElementById("darkMode");
-
-      dark.addEventListener("click", function () {
-
-        var cont = document.getElementsByClassName("container")[0];
-        cont.style.backgroundColor = "#322622";
-        document.body.style.backgroundColor = "#322622";
-
-        var title = document.getElementById("titleConfess");
-        title.style.color = "#E6DAD7";
-
-        var confessCont = document.getElementsByClassName("confess");
-        var paragraphs = document.getElementsByClassName("para");
-
-        for (let i = 0; i < confessCont.length; i++) {
-          confessCont[i].style.backgroundColor = "rgb(164, 137, 126)";
-          confessCont[i].style.color = "#E6DAD7";
-          paragraphs[i].style.color = "#E6DAD7";
-        }
-
-        var nav = document.getElementById("navBar");
-        nav.style.backgroundColor = "rgb(164, 137, 126)";
-
-        var navLinks = document.getElementsByClassName("nav");
-
-        for (let link of navLinks) {
-          link.style.color = "#E6DAD7";
-        }
-
-        var foot = document.querySelector("footer");
-        foot.style.backgroundColor = "#A9887C";
-
-      });
-    </script>
-
-    <div class="content">
-      <div class="cols" id="left">
-        <div class="confess">
-          <div class="confessContent">
-            <div>From: Unknown</div>
-            <div>Mon Feb 24</div>
-          </div>
-          <p class="para">
-            Hi! I’ve been wanting to get into volleyball more seriously for
-            some time. I’ve played a bit before, but not on a professional
-            level. I’d really love to improve and practice regularly. It would
-            mean a lot if supportive, non-judgmental friends who are open to
-            helping could reach out. Thank you in advance!
-          </p>
-          <div class="confessContent">
-            <div><img src="../images/icons.svg" alt=""> 12</div>
-            <div>
-              <img src="../images/like.svg" alt="">
-              <img src="../images/dislike.svg" alt=""> 40/4
-            </div>
-          </div>
-        </div>
-        <div class="confess">
-          <div class="confessContent">
-            <div>From: Unknown</div>
-            <div>Fri Mar 14</div>
-          </div>
-          <p class="para">
-            Every time I think about what I said to you, my heart aches. I
-            can’t forget the moments I hurt you. The disappointment I saw in
-            your eyes still haunts me. Even your silence is enough to tear me
-            apart. I know there’s no excuse for the way I treated you, but I
-            regret it deeply from the bottom of my heart. What I said that day
-            didn’t come from anger—it came from a place of helplessness. I
-            hurt the most precious person without understanding them. With
-            every passing day, I realize more how much I love you. Sometimes,
-            I just wish I could hold you and say how truly sorry I am.
-          </p>
-          <div class="confessContent">
-            <div><img src="../images/icons.svg" alt=""> 39</div>
-            <div>
-              <img src="../images/like.svg" alt="">
-              <img src="../images/dislike.svg" alt=""> 120/43
-            </div>
-          </div>
-        </div>
-        <div class="confess">
-          <div class="confessContent">
-            <div>From: Unknown</div>
-            <div>Wed Apr 23</div>
-          </div>
-          <p class="para">
-            Hello, I have wanted to play volleyball for a long time, but I
-            want to do more volleyball training. I played for a while, but not
-            professionally. I want to improve myself. I would be very happy if
-            friends who would not judge me and would help me would write to
-            me.
-          </p>
-          <div class="confessContent">
-            <div><img src="../images/icons.svg" alt=""> 45</div>
-            <div>
-              <img src="../images/like.svg" alt="">
-              <img src="../images/dislike.svg" alt=""> 56/10
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cols" id="right">
-        <div class="confess">
-          <div class="confessContent">
-            <div>From: Unknown</div>
-            <div>Thu May 1</div>
-          </div>
-          <p class="para">
-            I often think that the reason why I cannot make close friends at
-            this school is that I do not smoke. Of course, I have classmates
-            and friends from the club, but they disappear to the smoking area
-            during breaks and all meetings, etc., are arranged there. I am
-            very serious, I will start smoking soon.
-          </p>
-          <div class="confessContent">
-            <div><img src="../images/icons.svg" alt=""> 198</div>
-            <div>
-              <img src="../images/like.svg" alt="">
-              <img src="../images/dislike.svg" alt=""> 200/32
-            </div>
-          </div>
-        </div>
-
-        <div class="confess">
-          <div class="confessContent">
-            <div>From: Unknown</div>
-            <div>Mon Feb 24</div>
-          </div>
-          <p class="para">
-            I shouted at you in G building, I broke your heart, beautiful, and
-            I feel the pain of this more and more every day. At that moment,
-            in my anger, even when I think of you, my eyes fill with tears. I
-            treated you in a way you didn't deserve, I broke the most precious
-            thing, you. Just saying I love you is not enough to express what I
-            feel. I want you to forgive, but I know it won't be easy. What
-            happened with the B cigarette is unforgettable, and neither are
-            you. You are very precious to me, every moment, every second I'm
-            really sorry.
-          </p>
-          <div class="confessContent">
-            <div><img src="../images/icons.svg" alt=""> 110</div>
-            <div>
-              <img src="../images/like.svg" alt="">
-              <img src="../images/dislike.svg" alt=""> 111/27
-            </div>
-          </div>
-        </div>
-
-        <div class="confess">
-          <div class="confessContent">
-            <div>From: Unknown</div>
-            <div>Mon Feb 24</div>
-          </div>
-          <p class="para">
-            Hi! I’ve been wanting to get into volleyball more seriously for
-            some time. I’ve played a bit before, but not on a professional
-            level. I’d really love to improve and practice regularly. It would
-            mean a lot if supportive, non-judgmental friends who are open to
-            helping could reach out. Thank you in advance!
-          </p>
-          <div class="confessContent">
-            <div><img src="../images/icons.svg" alt=""> 34</div>
-            <div>
-              <img src="../images/like.svg" alt="">
-              <img src="../images/dislike.svg" alt="">40/12
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer>
-      <div id="topFooter">
-        <div id="leftSocial">
-          <h1>BILCONFESS</h1>
-        </div>
-        <div id="rightSocial">
-          <div class="social" id="sendMail">
-            Contact Us: email@email.com
-          </div>
-          <div class="social" id="accounts">
-            <p>Our Socials <img src="../images/mdi-instagram.svg" alt=""></p>
-          </div>
-        </div>
-      </div>
-      <div id="middleFooter">
-        <a href="">Home Page</a>
-        <a href="">Feed</a>
-        <a href="">Current News</a>
-        <a href="">Submit a Confession</a>
-        <a href="../love_confessions.html" target="_blank">Love Confessions</a>
-        <a href="">Make-a-Friend</a>
-      </div>
-      <div id="bottomFooter">
-        <p>
-          <a>Terms of Use</a> |
-          <a>Privacy Policy</a> |
-          <a>Copyright @ 2025</a>
-        </p>
-      </div>
-    </footer>
-  </div>
-</body>
-
+  </body>
 </html>
