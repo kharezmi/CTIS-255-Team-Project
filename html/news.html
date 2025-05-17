@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love confessions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap"
+        rel="stylesheet" />
+    <link href="../css/love_confessions.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #img {
+            border-radius: 40px;
+            width: 848px;
+            height: 480px;
+            background: url("../images/garden.jpg") center;
+        }
+
+        #gallery-right {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            flex: 1 0 0;
+            padding: 24px;
+            align-items: flex-end;
+            justify-content: space-between;
+            border-radius: 40px;
+            box-sizing: border-box;
+            gap: 24px;
+        }
+
+        #gallery-right p {
+            display: -webkit-box;
+            line-clamp: 7;
+            -webkit-line-clamp: 7;
+            -webkit-box-orient: vertical;
+            overflow-block: hidden;
+        }
+
+        .article-image {
+            border-radius: 40px;
+            width: 306px;
+            height: 306px;
+            background: url("../images/water.jpeg") center;
+        }
+
+        .article-left {
+            display: flex;
+            padding: 32px 24px;
+            flex: 1 0 0;
+            justify-content: space-between;
+        }
+
+        article {
+            display: flex;
+            gap: 17px;
+        }
+
+        #gallery {
+            display: flex;
+            gap: 16px;
+            height: 480px;
+        }
+
+        .article-card {
+            display: flex;
+            background: var(--background-1, #e6dad7);
+            border-radius: 40px;
+            box-sizing: border-box;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        #articles button {
+            padding: 6px 80px;
+            
+        }
+        button{
+            border-radius: 40px;
+            background: var(--button, #ccafa5);
+            border: 0;
+            font-size: 24px;
+            font-weight: 500;
+            padding: 6px 18px;
+        }
+
+        .closer{
+            flex-direction: column;
+            display: flex;
+            gap: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="full">
+        <header>
+            <a class="h1">BILCONFESS</a>
+            <menu>
+                <a href="feed.html">feed</a>
+                <a>submit a post</a>
+                <a>love confessions</a>
+                <a href="make_a_friend.html">make-a-friend</a>
+                <a>news</a>
+                <img class="icon" src="../images/iconamoon-mode-dark.svg" />
+            </menu>
+        </header>
+        <main>
+            <img src="../images/arrow-left.svg" style="width:24px; position: absolute; top:428px; left:125px">
+            <img src="../images/arrow-right.svg" style="width:24px; position: absolute; top:428px; left:1291px">
+            <div id="gallery">
+                <div id="img"></div>
+                <div id="gallery-right" class="article-card">
+                    <div class="closer">
+                        <h3>Terror Blooms in New Castle Gardens</h3>
+                        <p>
+                            A quiet neighborhood turns crime scene as a
+                            series of brutal
+                            killings rattles New Castle Gardens. Residents
+                            fear the worst as
+                            police race to connect the dots in a case that’s
+                            anything but
+                            ordinary.
+                        </p>
+                    </div>
+
+                    <button>See more</button>
+                </div>
+            </div>
+            <div id="articles">
+                <article>
+                    <div class="article-left article-card">
+                        <div class="closer">
+                            <h3>
+                                Local Library Launches Late-Night Study
+                                Hours for Exam Season
+                            </h3>
+                            <p>
+                                New Castle Public Library will stay open
+                                late through the end
+                                of the month to support students during
+                                exams. Free snacks and
+                                volunteer tutors will be available nightly.
+                            </p>
+                        </div>
+                        <button>See more</button>
+                    </div>
+                    <div class="article-image"></div>
+                </article>
+            </div>
+        </main>
+        <footer>
+            <div id="footer_top">
+                <div id="logo">
+                    <a class="h1">BILCONFESS</a>
+                </div>
+                <div id="to_right">
+                    <p>Contact Us: email@email.com</p>
+                    <p>
+                        Our socials <img class="icon" src="../images/mdi-instagram.svg" />
+                    </p>
+                </div>
+            </div>
+            <div id="line">
+                <a>Home Page</a>
+                <a>Feed</a>
+                <a>Current News</a>
+                <a>Submit A Confession</a>
+                <a>Love Confessions</a>
+                <a>Make-A-Friend</a>
+            </div>
+            <div id="dark">
+                <p>
+                    <a>Terms of Use</a> | <a>Privacy Policy</a> |
+                    <a>Copyright@2025</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -81,6 +81,7 @@ function checkCollision(i) {
             }
         }
     }
+    return false;
 }
 
 function shoot() {
