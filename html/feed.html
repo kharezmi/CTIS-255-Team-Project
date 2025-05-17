@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../css/feed.css" />
   <script src="../scripts/functions.js"></script>
+  <link rel="stylesheet" href="../css/feed.css" />
 </head>
 
 <body>
@@ -21,14 +21,13 @@
     <div id="navBar">
       <a class="nav" href="feed.html">FEED</a>
       <a class="nav" href="">SUBMIT A POST</a>
-      <a class="nav" href="../love_confessions.html" target="_blank">LOVE CONFESSIONS</a>
-      <a class="nav" href="">MAKE-A-FRIEND</a>
+      <a class="nav" href="../love_confessions.html">LOVE CONFESSIONS</a>
+      <a class="nav" href="../html/make_a_friend.html">MAKE-A-FRIEND</a>
       <a class="nav" href="">NEWS</a>
       <img src="../images/iconamoon-mode-dark.svg" alt="" id="darkMode">
     </div>
 
     <script>
-
       var dark = document.getElementById("darkMode");
 
       dark.addEventListener("click", function () {
@@ -51,10 +50,10 @@
 
         var nav = document.getElementById("navBar");
         nav.style.backgroundColor = "rgb(164, 137, 126)";
-        
+
         var navLinks = document.getElementsByClassName("nav");
 
-        for(let link of navLinks){
+        for (let link of navLinks) {
           link.style.color = "#E6DAD7";
         }
 
@@ -62,7 +61,6 @@
         foot.style.backgroundColor = "#A9887C";
 
       });
-      
     </script>
 
     <div class="content">

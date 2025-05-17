@@ -21,18 +21,36 @@
     <div id="navBar">
       <a class="nav" href="feed.html">FEED</a>
       <a class="nav" href="">SUBMIT A POST</a>
-      <a class="nav" href="../love_confessions.html" target="_blank">LOVE CONFESSIONS</a>
-      <a class="nav" href="">MAKE-A-FRIEND</a>
+      <a class="nav" href="../love_confessions.html">LOVE CONFESSIONS</a>
+      <a class="nav" href="../html/make_a_friend.html">MAKE-A-FRIEND</a>
       <a class="nav" href="">NEWS</a>
       <img src="../images/iconamoon-mode-dark.svg" alt="" id="darkMode">
     </div>
 
     <script>
-      var darkMode = document.getElementById("dark");
+      var dark = document.getElementById("darkMode");
 
-      darkMode.addEventListener("click", function () {
-        var bodyBg = document.getElementsByClassName("container");
-        bodyBg.style.backgroundColor = "black";
+      dark.addEventListener("click", function () {
+
+        var cont = document.getElementsByClassName("container")[0];
+        cont.style.backgroundColor = "#322622";
+        document.body.style.backgroundColor = "#322622";
+
+        var title = document.getElementById("titleConfess");
+        title.style.color = "#E6DAD7";
+
+        var nav = document.getElementById("navBar");
+        nav.style.backgroundColor = "rgb(164, 137, 126)";
+
+        var navLinks = document.getElementsByClassName("nav");
+
+        for (let link of navLinks) {
+          link.style.color = "#E6DAD7";
+        }
+
+        var foot = document.querySelector("footer");
+        foot.style.backgroundColor = "#A9887C";
+
       });
     </script>
 
@@ -52,11 +70,11 @@
               </td>
             </tr>
             <tr>
-              <td  class="inpName">Age</td>
+              <td class="inpName">Age</td>
               <td><input type="text" placeholder="enter your age" /></td>
             </tr>
             <tr>
-              <td  class="inpName">Gender</td>
+              <td class="inpName">Gender</td>
               <td>
                 <select name="" id="">
                   <option value="" disabled selected>choose gender</option>
@@ -67,7 +85,7 @@
               </td>
             </tr>
             <tr>
-              <td  class="inpName">Faculty</td>
+              <td class="inpName">Faculty</td>
               <td>
                 <select name="" id="">
                   <option value="" disabled selected>choose faculty</option>
@@ -80,10 +98,15 @@
               </td>
             </tr>
             <tr>
-              <td  class="inpName">Hobby</td>
+              <td class="inpName">Hobby</td>
               <td>
-                <select name="" id="">
+                <select name="" id="hobbie">
                   <option value="" disabled selected>choose hobbies</option>
+                  <script>
+                    for (let hb of hobbies) {
+                      document.write(`<option value="">${hb}</option>`);
+                    }
+                  </script>
                 </select>
               </td>
             </tr>
@@ -93,11 +116,11 @@
           <textarea name="" id=""></textarea>
         </div>
       </div>
-      
+
       <div id="agreement">
         <p>I agree with the rules <input id="check" type="checkbox" /></p>
 
-        <button>Submit</button>
+        <submit>Submit</submit>
       </div>
     </div>
     <footer>

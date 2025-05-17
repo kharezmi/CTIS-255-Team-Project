@@ -63,12 +63,12 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(186, 155, 141, 0.9);
+  background-color: rgb(164, 137, 126);
   border-radius: 25px;
   width: 320px;
   height: 25px;
   margin: 15px auto;
-  padding-bottom: 17px;
+  padding-bottom: 19px;
 }
 
 #make_a_friend h2 {
@@ -79,19 +79,19 @@ a {
 
 #submit {
   background-color: #E6DAD7;
-  width: 83%;
+  width: 65%;
   border-radius: 40px;
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 680px;
+  height: 630px;
 }
 
 div#form {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 10px;
   padding: 20px;
   position: relative;
@@ -102,6 +102,7 @@ table {
   align-items: center;
   position: relative;
   top: 23px;
+  left: -45px;
 }
 
 tr {
@@ -114,14 +115,13 @@ tr {
   text-align: left;
   font-size: 2rem;
   margin-left: 50px;
-  margin-top: 10px;
+  margin-top: 15px;
   position: relative;
 }
 
 td.inpName {
   font-size: 24px;
   color: rgb(126, 102, 94);
-  padding-right: 200px;
 }
 
 input,
@@ -129,12 +129,14 @@ select {
   border: 1.5px solid #A9887C;
   border-radius: 40px;
   height: 40px;
-  width: 350px;
+  width: 250px;
   color: #ac948e;
   appearance: none;
   font-size: 1.2rem;
   margin-bottom: 40px;
   padding-left: 20px;
+  position: relative;
+  right: -65px;
 }
 
 input::placeholder {
@@ -142,7 +144,7 @@ input::placeholder {
 }
 
 input {
-  width: 335px;
+  width: 280px;
   height: 34px;
   padding-bottom: 4px;
 }
@@ -153,15 +155,15 @@ input {
   background-size: 15px;
   background-position-x: 95%;
   background-position-y: center;
-  width: 360px;
+  width: 305px;
   padding-left: 20px;
   align-items: center;
   padding-bottom: 4px;
 }
 
 textarea {
-  width: 450px;
-  height: 400px;
+  width: 380px;
+  height: 330px;
   border: 1.5px solid #A9887C;
   border-radius: 35px;
   color: rgb(126, 102, 94);
@@ -169,6 +171,7 @@ textarea {
   font-size: 1rem;
   position: relative;
   top: 25px;
+  right: -45px;
 }
 
 #agreement {
@@ -198,7 +201,7 @@ input[type="checkbox"]:checked {
   background-color: rgb(126, 102, 94);
 }
 
-button {
+submit{
   background-color: #CCAFA5;
   border: none  ;
   border-radius: 20px;
@@ -212,10 +215,10 @@ button {
   cursor: pointer;
   font-size: 1.5rem;
   align-items: center;
-  padding-bottom: 3px;
+  padding-top: 3px;
 }
 
-button:hover {
+submit:hover {
   background-color: rgb(164, 137, 126);
   color: #CCAFA5;
 }
