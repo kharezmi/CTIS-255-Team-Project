@@ -1,3 +1,10 @@
+let currentIndex = 0;
+
+function updateGallery(){
+    const item = headliners[currentIndex];
+    $("gallery").html(``)
+}
+
 $(document).ready(function (){
     news.forEach(article => {
         const card=`
@@ -18,5 +25,4 @@ $(document).ready(function (){
         `;
         $("#articles").append(card);
     })
-
 })

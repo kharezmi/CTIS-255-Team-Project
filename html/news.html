@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap"
         rel="stylesheet" />
-    <link href="../css/love_confessions.css" rel="stylesheet" href="../css/common.css"/>
+    <link href="../css/love_confessions.css" rel="stylesheet" href="../css/common.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../scripts/main.js"></script>
     <script src="../scripts/news-data.js"></script>
@@ -38,6 +38,7 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            width: auto;
             flex: 1 0 0;
             padding: 24px;
             align-items: flex-end;
@@ -59,7 +60,6 @@
             border-radius: 40px;
             width: 306px;
             height: 306px;
-            background-position: 25% 75%;
         }
 
         .article-left {
@@ -76,8 +76,9 @@
 
         #gallery {
             display: flex;
-            gap: 16px;
+            align-content:space-between ;
             height: 480px;
+            gap: 16px;
         }
 
         .article-card {
@@ -91,9 +92,10 @@
 
         #articles button {
             padding: 6px 80px;
-            
+
         }
-        button{
+
+        button {
             border-radius: 40px;
             background: var(--button, #ccafa5);
             border: 0;
@@ -102,13 +104,11 @@
             padding: 6px 18px;
         }
 
-        .closer{
+        .closer {
             flex-direction: column;
             display: flex;
             gap: 12px;
         }
-
-        
     </style>
 </head>
 
@@ -122,13 +122,15 @@
                 <a href="#header">love confessions</a>
                 <a href="make_a_friend.html">make-a-friend</a>
                 <a href="#header">news</a>
-                <img class="icon" src="../images/iconamoon-mode-dark.svg" onclick="toggleDarkMode()"/>
+                <img class="icon" src="../images/iconamoon-mode-dark.svg" onclick="toggleDarkMode()" />
             </menu>
         </header>
-        
+
         <main>
-            <img class="icon" src="../images/arrow-left.svg" style="width:24px; position: absolute; top:428px; left:125px">
-            <img class="icon" src="../images/arrow-right.svg" style="width:24px; position: absolute; top:428px; left:1291px">
+            <img class="icon" src="../images/arrow-left.svg"
+                style="width:24px; position: absolute; top:428px; left:140px">
+            <img class="icon" src="../images/arrow-right.svg"
+                style="width:24px; position: absolute; top:428px; left:1306px">
             <div id="gallery">
                 <div id="img"></div>
                 <div id="gallery-right" class="article-card">
@@ -147,38 +149,39 @@
 
                     <button>See more</button>
                 </div>
+
+    </div>
+    <div id="articles">
+
+    </div>
+    </main>
+    <footer>
+        <div id="footer_top">
+            <div id="logo">
+                <a class="h1">BILCONFESS</a>
             </div>
-            <div id="articles">
-                
-            </div>
-        </main>
-        <footer>
-            <div id="footer_top">
-                <div id="logo">
-                    <a class="h1">BILCONFESS</a>
-                </div>
-                <div id="to_right">
-                    <p>Contact Us: email@email.com</p>
-                    <p>
-                        Our socials <img class="icon" src="../images/mdi-instagram.svg" />
-                    </p>
-                </div>
-            </div>
-            <div id="line">
-                <a>Home Page</a>
-                <a>Feed</a>
-                <a>Current News</a>
-                <a>Submit A Confession</a>
-                <a>Love Confessions</a>
-                <a>Make-A-Friend</a>
-            </div>
-            <div id="dark">
+            <div id="to_right">
+                <p>Contact Us: email@email.com</p>
                 <p>
-                    <a>Terms of Use</a> | <a>Privacy Policy</a> |
-                    <a>Copyright@2025</a>
+                    Our socials <img class="icon" src="../images/mdi-instagram.svg" />
                 </p>
             </div>
-        </footer>
+        </div>
+        <div id="line">
+            <a>Home Page</a>
+            <a>Feed</a>
+            <a>Current News</a>
+            <a>Submit A Confession</a>
+            <a>Love Confessions</a>
+            <a>Make-A-Friend</a>
+        </div>
+        <div id="dark">
+            <p>
+                <a>Terms of Use</a> | <a>Privacy Policy</a> |
+                <a>Copyright@2025</a>
+            </p>
+        </div>
+    </footer>
     </div>
 </body>
 
