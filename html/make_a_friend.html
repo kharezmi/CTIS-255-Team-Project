@@ -27,32 +27,7 @@
       <img src="../images/iconamoon-mode-dark.svg" alt="" id="darkMode">
     </div>
 
-    <script>
-      var dark = document.getElementById("darkMode");
 
-      dark.addEventListener("click", function () {
-
-        var cont = document.getElementsByClassName("container")[0];
-        cont.style.backgroundColor = "#322622";
-        document.body.style.backgroundColor = "#322622";
-
-        var title = document.getElementById("titleConfess");
-        title.style.color = "#E6DAD7";
-
-        var nav = document.getElementById("navBar");
-        nav.style.backgroundColor = "rgb(164, 137, 126)";
-
-        var navLinks = document.getElementsByClassName("nav");
-
-        for (let link of navLinks) {
-          link.style.color = "#E6DAD7";
-        }
-
-        var foot = document.querySelector("footer");
-        foot.style.backgroundColor = "#A9887C";
-
-      });
-    </script>
 
     <div id="make_a_friend">
       <h2>MAKE-A-FRIEND</h2>
