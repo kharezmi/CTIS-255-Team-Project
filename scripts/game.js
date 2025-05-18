@@ -168,7 +168,6 @@ $(document).ready(function () {
                     $("#sec").html('30');
                     $("#score-number").html("0");
                     clearInterval(game_timer);
-                    clearInterval(heart_timer);
                     clearInterval(arrow_timer);
                     //done screen insert later
                 }

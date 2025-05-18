@@ -32,9 +32,9 @@ let confessions = [
         dislikes: 0
     },
     {
-        from: "Angel",
+        from: "anonymous",
         date: "Thu May 16",
-        text: "We shouldndrink lots of water, friends",
+        text: "We should drink lots of water, friends",
         comments: [{
             from: "anonymous",
             date: "Wed May 15",

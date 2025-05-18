@@ -31,7 +31,19 @@
   color: var(--light-text, #ffffff);
 }
 
+#full {
+  display: flex;
+  flex-direction: column;
+  width: 1136px;
+  padding: 32px 152px 65px 152px;
+  gap: 48px;
+  background-color: var(--light-bg-color-1, #ffffff);
+}
+
 .dark-mode{
+    background-color: var(--dark-bg-color-1, #56423b);
+}
+.dark-mode #full{
     background-color: var(--dark-bg-color-1, #56423b);
 }
 
@@ -46,6 +58,9 @@
 .dark-mode #dark *{
     color: var(--dark-text-alt, #7f655c);
 }
+.dark-mode #game *{
+    color: var(--dark-text-alt, #7f655c);
+}
 
 .dark-mode button{
     background-color: var(--dark-button, #ccafa5);
@@ -58,4 +73,21 @@
 
 .dark-mode form {
     border: var(--dark-border, #a9887c);
+}
+
+.dark-mode .card{
+    background-color: var(--dark-bg-color-2, #8a6c61);
+}
+
+.dark-mode .article-card{
+    background-color: var(--dark-bg-color-2, #8a6c61);
+}
+
+
+.dark-mode menu{
+    background-color: var(--dark-bg-color-2, #8a6c61);
+}
+
+.dark-mode .icon{
+   filter: brightness(0) saturate(100%) invert(100%) sepia(6%) saturate(0%) hue-rotate(115deg) brightness(108%) contrast(108%);
 }
