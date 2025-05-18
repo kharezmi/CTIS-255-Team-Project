@@ -29,14 +29,7 @@ p {
   column-gap: 20px;
 }
 
-#full {
-  display: flex;
-  flex-direction: column;
-  width: 1136px;
-  padding: 32px 152px 65px 152px;
-  gap: 48px;
-  background-color: var(--light-bg-color-1, #ffffff);
-}
+
 
 header {
   width: 100%;

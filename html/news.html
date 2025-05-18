@@ -12,11 +12,19 @@
     <link href="../css/love_confessions.css" rel="stylesheet" href="../css/common.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/news-data.js"></script>
+    <script src="../scripts/news.js"></script>
     <style>
         main {
             display: flex;
             flex-direction: column;
             gap: 32px;
+        }
+
+        #articles {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
         }
 
         #img {
@@ -51,7 +59,7 @@
             border-radius: 40px;
             width: 306px;
             height: 306px;
-            background: url("../images/water.jpeg") center;
+            background-position: 25% 75%;
         }
 
         .article-left {
@@ -141,25 +149,7 @@
                 </div>
             </div>
             <div id="articles">
-                <article>
-                    <div class="article-left article-card">
-                        <div class="closer">
-                            <h3>
-                                Local Library Launches Late-Night Study
-                                Hours for Exam Season
-                            </h3>
-                            <p>
-                                New Castle Public Library will stay open
-                                late through the end
-                                of the month to support students during
-                                exams. Free snacks and
-                                volunteer tutors will be available nightly.
-                            </p>
-                        </div>
-                        <button>See more</button>
-                    </div>
-                    <div class="article-image"></div>
-                </article>
+                
             </div>
         </main>
         <footer>
