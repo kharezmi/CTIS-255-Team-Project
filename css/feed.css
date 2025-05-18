@@ -230,10 +230,6 @@ footer {
   color: #FFFFFF;
 }
 
-body.dark-mode {
-  background-color: #56423B;
-}
-
 body.dark-mode .container {
   background-color: #56423B;
 }
@@ -247,10 +243,6 @@ body.dark-mode #titleConfess {
 }
 
 body.dark-mode #navBar {
-  background-color: #8A6C61;
-}
-
-body.dark-mode footer {
   background-color: #8A6C61;
 }
 
