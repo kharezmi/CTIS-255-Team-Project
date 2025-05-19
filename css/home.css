@@ -62,7 +62,7 @@ a {
   flex-direction: row;
   justify-content: center;
   margin-top: 5px;
-  width: 65%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -75,12 +75,12 @@ a {
 
 .confess {
   background-color: #e6dad7;
-  width: 100%;
+  width: 90%;
   border-radius: 40px;
   padding: 25px;
-  margin: 10px;
+  margin-bottom: 10px;
   position: relative;
-  top: 2px;
+  top: 10px;
   font-size: 24px;
   font-weight: 500;
 }
@@ -94,7 +94,7 @@ a {
   height: 50px;
   font-size: 24px;
   font-weight: 500;
-  padding: 5px;
+  padding: 10px;
 }
 
 .confessContent i {
@@ -118,7 +118,7 @@ i#dark {
 
 #left {
   flex: 1;
-  margin-right: 100px;
+  margin-right: 25px;
 }
 
 #right {
@@ -132,7 +132,7 @@ footer {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 75%;
   font-size: 20px;
   height: 81%;
   padding: 13px;
@@ -142,7 +142,6 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0px 10px;
   align-items: center;
   max-height: max-content;
 }
