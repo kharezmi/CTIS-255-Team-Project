@@ -31,6 +31,15 @@
   color: var(--light-text, #ffffff);
 }
 
+footer a{
+    text-decoration: none;
+}
+
+menu a.active {
+  font-weight: bold;
+  color:#ff6ba4;
+}
+
 #full {
   display: flex;
   flex-direction: column;
