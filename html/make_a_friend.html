@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="../css/friend.css" />
   <script src="../scripts/data.js"></script>
   <script src="../scripts/autosize.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -94,9 +97,19 @@
       </div>
 
       <div id="agreement">
-        <p>I agree with the rules <input id="check" type="checkbox" /></p>
 
-        <submit>Submit</submit>
+        <p>I agree with the <span id="rules">rules</span> <input id="check" type="checkbox" /></p>
+
+        <div id="rulesAccordion" title="Read the Rules" style="display: none;">
+          <div>
+            <p> 1. Please be respectful.</p>
+            <p> 2. Do not share any personal or offensive content.</p>
+            <p> 3. Avoid spam.</p>
+            <p> 4. The information you submit should follow community guidelines.</p>
+          </div>
+        </div>
+
+        <button>Submit</button>
       </div>
     </div>
     <footer>
@@ -129,9 +142,33 @@
   </div>
 
   <script src="../scripts/functions.js"></script>
+
   <script>
-		autosize(document.querySelectorAll('textarea'));
-	</script>
+    autosize(document.querySelectorAll('textarea'));
+  </script>
+
+  <div id="window" title="Success!" style="display:none; background-color: #A9887C; ">
+    <p style="color: #FFFFFF;">Your information has been successfully submitted!</p>
+  </div>
+
+  <script>
+
+    $(function () {
+      $("button").click(function () {
+        if ($("#check").is(":checked")) {
+          $("#window").dialog();
+        } else {
+          alert("Please agree with the rules!");
+        }
+      });
+    });
+
+    $(function () {
+      $("#rules").click(function () {
+        $("#rulesAccordion").dialog();
+      })
+    })
+  </script>
 </body>
 
 </html>
