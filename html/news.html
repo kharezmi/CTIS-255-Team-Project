@@ -45,7 +45,6 @@
             justify-content: space-between;
             border-radius: 40px;
             box-sizing: border-box;
-            gap: 24px;
         }
 
         #gallery-right p {
@@ -76,7 +75,7 @@
 
         #gallery {
             display: flex;
-            align-content:space-between ;
+            align-content: space-between;
             height: 480px;
             gap: 16px;
         }
@@ -127,61 +126,41 @@
         </header>
 
         <main>
-            <img class="icon" src="../images/arrow-left.svg"
+            <img id="left-arrow" class="icon" src="../images/arrow-left.svg" onclick=""
                 style="width:24px; position: absolute; top:428px; left:140px">
-            <img class="icon" src="../images/arrow-right.svg"
+            <img id="right-arrow" class="icon" src="../images/arrow-right.svg"
                 style="width:24px; position: absolute; top:428px; left:1306px">
-            <div id="gallery">
-                <div id="img"></div>
-                <div id="gallery-right" class="article-card">
-                    <div class="closer">
-                        <h3>Terror Blooms in New Castle Gardens</h3>
-                        <p>
-                            A quiet neighborhood turns crime scene as a
-                            series of brutal
-                            killings rattles New Castle Gardens. Residents
-                            fear the worst as
-                            police race to connect the dots in a case that’s
-                            anything but
-                            ordinary.
-                        </p>
-                    </div>
-
-                    <button>See more</button>
+            <div id="gallery"></div>
+            <div id="articles"></div>
+        </main>
+        <footer>
+            <div id="footer_top">
+                <div id="logo">
+                    <a class="h1">BILCONFESS</a>
                 </div>
-
-    </div>
-    <div id="articles">
-
-    </div>
-    </main>
-    <footer>
-        <div id="footer_top">
-            <div id="logo">
-                <a class="h1">BILCONFESS</a>
+                <div id="to_right">
+                    <p>Contact Us: email@email.com</p>
+                    <p>
+                        Our socials <img class="icon" src="../images/mdi-instagram.svg"
+                            href="https://www.instagram.com/bilkent_itiraf_ediyor/" />
+                    </p>
+                </div>
             </div>
-            <div id="to_right">
-                <p>Contact Us: email@email.com</p>
+            <div id="line">
+                <a href="index_home.html">Home Page</a>
+                <a href="feed.html">Feed</a>
+                <a href="news.html">Current News</a>
+                <a href="post_form.html">Submit A Confession</a>
+                <a href="love_confessions.html">Love Confessions</a>
+                <a href="make-a-friend">Make-A-Friend</a>
+            </div>
+            <div id="dark">
                 <p>
-                    Our socials <img class="icon" src="../images/mdi-instagram.svg" />
+                    <a>Terms of Use</a> | <a>Privacy Policy</a> |
+                    <a>Copyright@2025</a>
                 </p>
             </div>
-        </div>
-        <div id="line">
-            <a>Home Page</a>
-            <a>Feed</a>
-            <a>Current News</a>
-            <a>Submit A Confession</a>
-            <a>Love Confessions</a>
-            <a>Make-A-Friend</a>
-        </div>
-        <div id="dark">
-            <p>
-                <a>Terms of Use</a> | <a>Privacy Policy</a> |
-                <a>Copyright@2025</a>
-            </p>
-        </div>
-    </footer>
+        </footer>
     </div>
 </body>
 
