@@ -107,10 +107,14 @@ function shoot() {
 
 $(document).ready(function () {
 
-    $("#game").on("click", start_game);
+    $("#start button").on("click", function(){
+        $("#start").hide();
+        start_game();
+    });
 
 
     function start_game() {
+        $("#game").show();
         if (!isGameStarted) {
             isGameStarted = true;
             $("#game").off("click")
@@ -159,7 +163,13 @@ $(document).ready(function () {
                 }
                 else {
                     isGameStarted = false;
-                    $("#game").on("click", start_game);
+                    $("#game").hide();
+                    $("#finish").show();
+                    $("#finish span").html(score);
+                    $("#finish button").on("click", function(){
+                        $("#finish").hide();
+                        start_game();
+                    });
                     $(".heart").remove();
                     $(".arrow").remove();
                     arrows = [];

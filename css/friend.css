@@ -84,7 +84,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 704px;
+  padding-block: 40px;
 }
 
 div#form {

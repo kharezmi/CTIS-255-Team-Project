@@ -109,17 +109,39 @@ menu {
   width: 24px;
   height: 24px;
 }
-
-#game {
+.game{
   width: 560px;
   height: 560px;
   border-radius: 40px;
   background: var(--light-bg-color-2, #e6dad7);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   position: relative;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#start, #finish{
+  justify-content: center;
+  align-items: center;
+}
+
+#start button, #finish button{
+  background-color: #a9887c;
+  color: #fff;
+  font-weight: 700;
+  font-size:x-large;
+  margin-top: 20px;
+  padding: 5px 25px;
+  border: 1px solid #a9887c;
+  border-radius: 40px;
+  text-transform:uppercase;
+}
+
+#game {
+  
+  
+  justify-content: space-between;
+  
 }
 
 #game * {
