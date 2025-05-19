@@ -34,7 +34,7 @@ body {
   border-radius: 16px;
   background-color: var(--light-bg-color-2, #e6dad7);
   margin-top: 10px;
-  width: 97%;
+  width: 96%;
   height: 40px;
   text-align: center;
   align-items: center;
@@ -61,7 +61,7 @@ a {
   flex-direction: row;
   justify-content: center;
   margin-top: 32px;
-  width: 97%;
+  width: 96%;
   gap: 16px;
 }
 
@@ -142,9 +142,9 @@ footer {
 }
 
 #topFooter>div#leftSocial {
+  display: flex;
   width: 368px;
   height: 137px;
-  gap: 20px;
   border-radius: 20px;
   padding: 20px 60px;
   background-color: #CCAFA5;
@@ -153,18 +153,13 @@ footer {
 }
 
 #leftSocial h1 {
-  width: 261px;
-  height: 27px;
-  font-size: 48px;
-  line-height: 32px;
+  line-height: 30px;
   letter-spacing: 0%;
   font-size: 50px;
   color: #7F655C;
-  text-align: center;
-  position: relative;
-  top: 45px;
-  left: -5px;
   font-weight: 800;
+  text-align: center;
+  margin-top: -15px;
 }
 
 #rightSocial {
@@ -176,7 +171,7 @@ footer {
 }
 
 #rightSocial>div.social {
-  width: 587px;
+  width: 575px;
   height: 80px;
   gap: 20px;
   border-radius: 20px;
@@ -197,7 +192,7 @@ footer {
 
 #middleFooter {
   display: flex;
-  margin-top: 20px; 
+  margin-top: 20px;
   width: 985px;
   height: 20px;
   justify-content: space-between;
@@ -210,7 +205,7 @@ footer {
   font-weight: 500;
 }
 
-#bottomFooter{
+#bottomFooter {
   display: flex;
   margin-top: 20px;
   width: 985px;
@@ -226,7 +221,8 @@ footer {
   color: #FFFFFF;
 }
 
-#bottomFooter a, #bottomFooter p {
+#bottomFooter a,
+#bottomFooter p {
   color: #FFFFFF;
 }
 
@@ -234,7 +230,7 @@ body.dark-mode .container {
   background-color: #56423B;
 }
 
-body.dark-mode #darkMode{
+body.dark-mode #darkMode {
   content: url(../images/iconamoon_mode-dark.svg);
 }
 
@@ -307,53 +303,79 @@ body.dark-mode #instagram {
   content: url("../images/mdi_instagram.svg");
 }
 
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
+  .container {
+    width: 95%;
+  }
 
   .content {
     flex-direction: column;
+    justify-content: center;
+  }
+
+  .cols#right {
+    margin-top: -5px;
+  }
+
+  #navBar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
   }
 
   .confess {
-    width: 365px;
-    padding: 25px;
-    margin: 10px;
-    position: relative;
-    top: 5px;
-    font-size: 20px;
-    font-weight: 500;
+    width: 90%;
+    margin: auto;
   }
 
   footer {
-    height: fit-content;
+    width: 85%;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
   }
 
   #topFooter {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    max-height: max-content;
-  }
-
-  #rightSocial>div.social {
-    width: 440px;
-    height: 60px;
-    font-size: 24px;
-    border-radius: 15px;
+    width: auto;
   }
 
   #topFooter>div#leftSocial {
-    width: 440px;
-    height: 60px;
-    border-radius: 15px;
-    margin-bottom: 10px;
+    width: auto;
+    gap: 20px;
+    padding: 20px 60px;
   }
 
   #leftSocial h1 {
-    font-size: 28px;
+    font-size: 36px;
+    margin-top: auto;
   }
 
+  #rightSocial {
+    width: auto;
+    gap: 16px;
+  }
+
+  #rightSocial>div.social {
+    width: inherit;
+    height: 40px;
+    padding: 10px 60px;
+    font-size: 24px;
+  }
+
+  #middleFooter {
+    margin-top: 60px;
+    width: auto;
+    height: 50px;
+    padding: 20px 60px;
+    font-size: 18px;
+  }
+
+  #bottomFooter {
+    width: auto;
+    height: 20px;
+    padding: 20px 60px;
+    font-size: 18px;
+  }
 
 }

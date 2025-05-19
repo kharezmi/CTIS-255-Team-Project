@@ -109,7 +109,7 @@ table {
 
 tr {
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -184,7 +184,7 @@ textarea {
   color: #7F655C;
 }
 
-#agreement p{
+#agreement p {
   position: relative;
   top: 10px;
 }
@@ -247,9 +247,9 @@ footer {
 }
 
 #topFooter>div#leftSocial {
+  display: flex;
   width: 368px;
   height: 137px;
-  gap: 20px;
   border-radius: 20px;
   padding: 20px 60px;
   background-color: #CCAFA5;
@@ -258,18 +258,13 @@ footer {
 }
 
 #leftSocial h1 {
-  width: 261px;
-  height: 27px;
-  font-size: 48px;
-  line-height: 32px;
+  line-height: 30px;
   letter-spacing: 0%;
   font-size: 50px;
   color: #7F655C;
-  text-align: center;
-  position: relative;
-  top: 45px;
-  left: -5px;
   font-weight: 800;
+  text-align: center;
+  margin-top: -15px;
 }
 
 #rightSocial {
@@ -281,7 +276,7 @@ footer {
 }
 
 #rightSocial>div.social {
-  width: 587px;
+  width: 575px;
   height: 80px;
   gap: 20px;
   border-radius: 20px;
@@ -340,7 +335,7 @@ body.dark-mode .container {
   background-color: #56423B;
 }
 
-body.dark-mode #darkMode{
+body.dark-mode #darkMode {
   content: url(../images/iconamoon_mode-dark.svg);
 }
 
@@ -385,26 +380,26 @@ body.dark-mode #instagram {
   content: url("../images/mdi_instagram.svg");
 }
 
-body.dark-mode #submit{
+body.dark-mode #submit {
   background-color: #8A6C61;
 }
 
-body.dark-mode #make_a_friend{
+body.dark-mode #make_a_friend {
   background-color: #F2DBD3;
 }
 
-body.dark-mode #make_a_friend h2{
+body.dark-mode #make_a_friend h2 {
   color: #7F655C;
 }
 
-body.dark-mode #form select{
+body.dark-mode #form select {
   background-image: url(../images/dark_arrowdown.svg);
   background-color: #56423B;
   border: 2px solid #E6DAD7;
   color: #E6DAD7;
 }
 
-body.dark-mode #form input{
+body.dark-mode #form input {
   background-color: #56423B;
   border: 2px solid #E6DAD7;
 }
@@ -413,20 +408,171 @@ body.dark-mode input::placeholder {
   color: #E6DAD7;
 }
 
-body.dark-mode textarea{
+body.dark-mode textarea {
   background-color: #56423B;
   border: 2px solid var(--Border, #E6DAD7);
 }
 
-body.dark-mode td, body.dark-mode #submit h3{
+body.dark-mode td,
+body.dark-mode #submit h3 {
   color: #FFFFFF;
 }
 
-body.dark-mode submit{
+body.dark-mode submit {
   background-color: #CCAFA5;
   color: #FFFFFF;
 }
 
-body.dark-mode submit:hover{
+body.dark-mode submit:hover {
   background-color: #56423B;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 95%;
+  }
+
+  .content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #navBar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  #submit {
+    width: 90%;
+    height: max-content;
+  }
+
+  div#form {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 20px;
+  }
+
+  #submit h3 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: -10px;
+  }
+
+  form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  table {
+    width: auto;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: auto;
+  }
+
+  tr{
+    justify-content: space-between;
+  }
+
+  #txtarea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  textarea {
+    width: 85%;
+    left: 10px;
+  }
+  
+  input{
+    width: 100%;
+  }
+  
+  #form select {
+    width: 230px;
+    position: relative;
+    right: -25px;
+  }
+
+  submit {
+    right: 45px;
+    top: 25px;
+    width: 40%;
+  }
+
+  #agreement {  
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  #agreement p {
+    position: relative;
+    top: -10px;
+  }
+  
+  input[type="checkbox"] {
+    left: 0px;
+  }
+
+  footer {
+    width: 85%;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  #topFooter {
+    flex-direction: column;
+    width: auto;
+  }
+
+  #topFooter>div#leftSocial {
+    width: auto;
+    gap: 20px;
+    padding: 20px 60px;
+  }
+
+  #leftSocial h1 {
+    font-size: 36px;
+    margin-top: auto;
+  }
+
+  #rightSocial {
+    width: auto;
+    gap: 16px;
+  }
+
+  #rightSocial>div.social {
+    width: inherit;
+    height: 40px;
+    padding: 10px 60px;
+    font-size: 24px;
+  }
+
+  #middleFooter {
+    margin-top: 60px;
+    width: auto;
+    height: 50px;
+    padding: 20px 60px;
+    font-size: 18px;
+  }
+
+  #bottomFooter {
+    width: auto;
+    height: 20px;
+    padding: 20px 60px;
+    font-size: 18px;
+  }
+
 }
