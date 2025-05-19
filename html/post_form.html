@@ -19,6 +19,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/post_form.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/post-confession-data.js"></script>
   </head>
   <body>
     <div class="container">
@@ -54,8 +56,8 @@
           const foot = document.querySelector("footer");
 
           if (isDark) {
-            cont.style.backgroundColor = "#322622";
-            body.style.backgroundColor = "#322622";
+            cont.style.backgroundColor = "#56423b";
+            body.style.backgroundColor = "#56423b";
             title.style.color = "#E6DAD7";
             nav.style.backgroundColor = "rgb(164, 137, 126)";
             foot.style.backgroundColor = "#A9887C";
@@ -96,13 +98,19 @@
           src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
           alt="Uploaded Photo"
         />
-        <button class="btn waves-effect waves-light">Add</button>
+
+        
+        <div>
+          <label for="files" id="btn" class="btn waves-effect waves-light">Select Image</label>
+          <input id="files" style="display:none;" type="file">
+        </div>
+
         <div style="margin-top: 8px; font-weight: bold">Photos</div>
       </div>
-      <form class="submission-form z-depth-0">
+      <form class="submission-form z-depth-0" id="confessionForm">
         <h5 style="font-weight: bold; color: #7e665e">Submission form</h5>
         <div class="input-field">
-          <input id="nickname" type="text" class="validate" />
+          <input id="nickname" type="text" class="validate" required />
           <label for="nickname" class="active"
             ><p class="nick" style="font-weight: bold; color: #7e665e">
               Type your nickname
@@ -110,11 +118,11 @@
           >
         </div>
         <div class="input-field">
-          <select>
+          <select id="topic" required>
             <option value="" disabled selected>Choose the Topic</option>
-            <option value="love">Love</option>
-            <option value="friendship">Friendship</option>
-            <option value="university">University</option>
+            <option value="Love">Love</option>
+            <option value="Friendship">Friendship</option>
+            <option value="University">University</option>
           </select>
           <label class="active"
             ><p style="font-weight: bold; color: #7e665e">Topic</p></label
@@ -123,7 +131,7 @@
         <div class="radio-group">
           <label style="margin-right: 16px">Hide nickname?</label>
           <label>
-            <input name="hide_nickname" type="radio" checked />
+            <input name="hide_nickname" type="radio" />
             <span>Yes</span>
           </label>
           <label>
@@ -138,7 +146,7 @@
             <span>Yes</span>
           </label>
           <label>
-            <input name="content_warning" type="radio" checked />
+            <input name="content_warning" type="radio" />
             <span>No</span>
           </label>
         </div>
@@ -148,7 +156,7 @@
         </div>
         <div class="rules-row">
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" id="agreeRules" />
             <span>I agree with the rules</span>
           </label>
           <button class="btn waves-effect waves-light" type="submit">
@@ -187,5 +195,7 @@
         M.FormSelect.init(elems);
       });
     </script>
+
+    
   </body>
 </html>
